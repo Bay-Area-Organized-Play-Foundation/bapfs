@@ -1,1 +1,11 @@
-# bapfs
+# Bay Area Pathfinder Society Website
+
+This contains the source code for the [Bay Area Pathfinder society web site](http://bayareapathfinder.com).
+
+## Making a Chance
+
+You can either navigate to the source file online and submit a change, or checkout the repository and edit in your favorite text editor.
+
+## Deploying a Change
+
+Currently the process is manual, but we'll have a small script to help with deployments shortly.
