@@ -2,7 +2,7 @@
 
 This contains the source code for the [Bay Area Pathfinder society web site](http://bayareapathfinder.com).
 
-## Making a Chance
+## Making a Change
 
 You can either navigate to the source file online and submit a change, or checkout the repository and edit in your favorite text editor.
 
