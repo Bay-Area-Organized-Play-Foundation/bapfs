@@ -31,7 +31,7 @@ blockquote p {
 }
 
 a {
-	color: #cb8419;
+	color: #f1ad45;
 }
 
 a:hover {
@@ -150,7 +150,7 @@ h2 {
 	padding: 0 50px;
 	font-size: 1.4em;
 	line-height: 20px;
-	color: #939393;
+	color: #cdcaca;
 }
 
 .notfound {
@@ -186,54 +186,11 @@ h2 {
 
 .postjumper {
 	float: left;
-	padding: 5px 20px 5px 0;  
+	padding: 5px 20px 5px 0;
 }
 
 
 /* Sidebar */
-
-#rss {
-	margin: 88px 0 0 113px;
-	width: 50px;
-	height: 50px;
-}
-
-#searchform {
-	width: 182px;
-	height: 42px;
-	padding: 10px 0 0 30px;
-	margin: 0;
-	background: url(images/search-bg.jpg) no-repeat;
-}
-
-#searchform p {
-	margin: 0;
-	padding: 0;
-}
-
-#searchform input {
-	float: left;
-	border: 0;
-	color: #000000;
-	margin: 0;
-}
-
-#searchform .searchtext {
-	margin: 3px 6px 0 0;
-	width: 121px;
-	display: inline;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 1.2em;
-}
-
-#searchform .searchbutton{
-	width: 30px;
-	height: 22px;
-}
-
-#searchform label {
-	display: none;
-}
 
 #sidebar {
 	width: 212px;
@@ -279,160 +236,11 @@ h2 {
 
 #sidebar ul ul li a {
 	text-decoration: none;
-	color: #565830;
-}
-
-/* Calendar */
-
-#wp-calendar {
-	empty-cells: show;
-	margin: 10px auto 0;
-	width: 155px;
-	color: #000;
-}
-
-#wp-calendar #next a {
-	padding-right: 10px;
-	text-align: right;
-	font-size: 9pt;
-}
-
-#wp-calendar #prev a {
-	padding-left: 10px;
-	text-align: left;
-	font-size: 9pt;
-}
-
-#wp-calendar a {
-	display: block;
-	font-weight: bold;
-	text-decoration: none;
-}
-
-#wp-calendar a:hover {
-	background: #000;
-	color: #fff;
-}
-
-#wp-calendar caption {
-	text-align: center;
-	width: 100%;
-	font: bold 1.3em 'Lucida Grande', Verdana, Arial, Sans-Serif;
-}
-
-#wp-calendar td {
-	padding: 3px 0;
-	text-align: center;
-}
-
-#wp-calendar th {
-	font-style: normal;
-	text-transform: capitalize;
-}
-
-
-/* Comments */
-
-h3#comments, #respond h3 {
-	padding: 0 30px;
-	font-size: 1.4em;
-	color: #ddd;
-}
-
-#commentform {
-	margin: 5px 10px 0 0;
-	color: #ddd;
-}
-
-#commentform input {
-	width: 170px;
-	padding: 2px;
-	margin: 5px 5px 1px 0;
-	font: 1em 'Lucida Grande', Verdana, Arial, Sans-Serif;
-}
-
-#commentform textarea {
-	width: 560px;
-	padding: 2px;
-	font: 1em 'Lucida Grande', Verdana, Arial, Sans-Serif;
-}
-
-#commentform p {
-	margin: 5px 0;
-	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
-}
-
-#commentform #submit {
-	margin: 0 0 5px auto;
-	float: right;
-}
-
-#respond {
-	color: #333;
-	padding: 0 30px;
-}
-
-#respond:after {
-	content: "."; 
-	display: block; 
-	height: 0; 
-	clear: both; 
-	visibility: hidden;
-}
-
-.commentlist {
-	padding: 0 30px;
-	margin: 0;
-}
-
-.commentlist li {
-	margin: 15px 0 10px;
-	padding: 5px 5px 10px 10px;
-	list-style: none;
-	font-weight: bold;
-	font: 0.9em 'Lucida Grande', Verdana, Arial, Sans-Serif;
-}
-
-.commentlist li ul li { 
-	margin-right: -5px;
-	margin-left: 10px;
-	font-size: 1em;
-}
-
-.commentlist p {
-	margin: 10px 5px 10px 0;
-	font-weight: normal;
-	line-height: 1.5em;
-	text-transform: none;
-}
-
-.commentlist li .avatar { 
-	float: right;
-	border: 1px solid #333;
-	padding: 2px;
-	background: #fff;
-}
-
-.commentlist cite, .commentlist cite a {
-	font-weight: bold;
-	font-style: normal;
-	font-size: 1.1em;
+	color: #d1d589;  /* Event names in sidebar */
 }
 
 .children {
 	padding: 0;
-}
-
-.nocomments {
-	text-align: center;
-	margin: 0;
-	padding: 0;
-}
-
-.commentmetadata {
-	margin: 0;
-	display: block;
-	font-weight: normal;
 }
 
 .thread-alt {
@@ -520,49 +328,4 @@ div.aligncenter {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-}
-
-.wp-caption {
-	border: 1px solid #ddd;
-	text-align: center;
-	background-color: #f3f3f3;
-	padding-top: 4px;
-	margin: 10px;
-	-moz-border-radius: 3px;
-	-khtml-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	border-radius: 3px;
-}
-
-.wp-caption img {
-	margin: 0;
-	padding: 0;
-	border: 0 none;
-}
-
-.wp-caption p.wp-caption-text {
-	font-size: 11px;
-	line-height: 17px;
-	padding: 0 4px 5px;
-	margin: 0;
-}
-
-.tern_members_view, .tern_members_sort {
-   color: #aaa;
-}
-
-.profilepic {margin:15px;float:left;}
-
-#members-list li {
-   clear:left;
-}
-
-#blocky {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 1.8em;
-	height: 29px;
-	width:575px;
-	margin: 0;
-	padding: 10px 0 0 56px;
-	background: url(images/post-top.jpg) no-repeat;
 }
