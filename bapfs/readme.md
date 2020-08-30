@@ -9,6 +9,4 @@ To compile css, cd into the root directory of this project, and run this command
 sass --watch Sources/Bapfs/Theme/smacss/styles.scss:Resources/styles.css --style compressed
 ```
 
-The project uses the [smacss](http://smacss.com) method or organizing stylesheets. Probably a bit overboard, but that is how DOug likes to organize do all his css. 
-
-Then, build the project.
+We probably want to gitignore the Output folder and build whenever someone pushes; not sure how you have your setup done here, Joe. Leaving it for now. 

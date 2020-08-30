@@ -36,7 +36,7 @@ private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
                             .h4("Pathfinder &amp; Starfinder Society games in San Francisco Bay Area"),
                             .a(.class("base_button"), .href("/events/"), .text("Find a Game"))
                         )
-                    ),
+                    ), // section#home_hero
                     .section(.class("section_wrapper"),
                         .article(.class("span12"),
                             .contentBody(index.body)
@@ -66,20 +66,9 @@ private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
                           menu.classList.toggle('active');
                         })
                         </script>
-
-                        <script type="text/javascript">
-                        $(window).scroll(function() {
-                          var scroll = $(window).scrollTop();
-                          if (scroll >= 100) {
-                              $("#fixed_nav").addClass("shrink-nav");
-                          } else {
-                              $("#fixedNav").removeClass("shrink-nav");
-                          }
-                        });
-                        </script>
-                    """)
-            )
-        )
+                    """) // raw -- Jam in some libs and simple js
+            ) // body
+        ) // html
     }
 
     func makeSectionHTML(for section: Section<Site>, context: PublishingContext<Site>) throws -> HTML {
@@ -93,10 +82,12 @@ private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
                              .article(.class("span12 post"), .contentBody(section.body))
                     ),
                     .itemList(for: section.items, on: context.site)
-                ),
-                .footer(for: context.site)
-            )
-        )
+                ), // wrapper
+                .footer(
+                    for: context.site
+                ) // footer
+            ) // body
+        ) // html
     }
 
     func makeItemHTML(for item: Item<Site>, context: PublishingContext<Site>) throws -> HTML {
@@ -108,17 +99,14 @@ private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
                 .header(for: context, selectedSection: item.sectionID),
                 .wrapper(
                     .section(.class("section_wrapper"),
-                        .article(
-                            .class("span12 post"),
-                            (
-                                .contentBody(item.body)
-                            ),
+                        .article(.class("span12 post"),
+                            (.contentBody(item.body)),
                             .hr(),
                             .p("Tagged with: "),
                             .tagList(for: item, on: context.site)
-                        )
-                    )
-                ),
+                        ) // article .span12 post
+                    ) // section.seciton_wrapper
+                ), // wrapper
                 .footer(for: context.site)
             )
         )
@@ -132,8 +120,8 @@ private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
                 .header(for: context, selectedSection: nil),
                 .wrapper(.contentBody(page.body)),
                 .footer(for: context.site)
-            )
-        )
+            ) // body
+        ) // html
     }
 
     func makeTagListHTML(for page: TagListPage, context: PublishingContext<Site>) throws -> HTML? {
@@ -144,22 +132,21 @@ private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
                 .header(for: context, selectedSection: nil),
                 .wrapper(
                     .h1("Browse all tags"),
-                    .ul(
-                        .class("all-tags"),
+                    .ul(.class("all-tags"),
                         .forEach(page.tags.sorted()) { tag in
                             .li(
                                 .class("tag"),
                                 .a(
                                     .href(context.site.path(for: tag)),
                                     .text(tag.string)
-                                )
-                            )
-                        }
-                    )
-                ),
+                                ) // a
+                            ) // li.tag
+                        } // forEach
+                    ) // ul.all-tags
+                ), // wrapper
                 .footer(for: context.site)
-            )
-        )
+            ) // body
+        ) // html
     }
 
     func makeTagDetailsHTML(for page: TagDetailsPage, context: PublishingContext<Site>) throws -> HTML? {
@@ -174,24 +161,24 @@ private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
                             .h1(
                                 "Tagged with: ",
                                 .span(.class("tag"), .text(page.tag.string))
-                            ),
+                            ), // h1
                             .a(
                                 .href(context.site.tagListPath)
-                            ),
+                            ), // a
                             .itemList(
                                 for: context.items(
                                     taggedWith: page.tag,
                                     sortedBy: \.date,
                                     order: .descending
-                                ),
+                                ), // for
                                 on: context.site
-                            )
-                        )
-                    )
-                ),
+                            ) // itemList
+                        ) // article.span12tagFilterIndex
+                    ) // section .section_wrapper
+                ), // wrapper
                 .footer(for: context.site)
             )
-        )
+        ) // html
     }
 }
 
@@ -232,7 +219,7 @@ private extension Node where Context == HTML.BodyContext { static func wrapper(_
                        .div(
                             .h5("Read Now"),
                             .tagList(for: item, on: site)
-                        )
+                        ) // div
                     ) // a.itemListLink
                 ) // article.span6
             }
