@@ -183,6 +183,7 @@ a.logo {
   @include type-setting(h1); 
   margin:1.5rem 0 1.5rem 0;
   text-align:center;
+  line-height:1.2;
   @include breakpoint(medium) {
     @include type-setting(huge); 
     margin-bottom:3rem;
@@ -266,7 +267,7 @@ a.logo {
   margin:0 auto;
 }
 
-.post p{
+article p{
   font-family:roboto;
   @include type-setting(body); 
   padding-bottom:.5rem;
