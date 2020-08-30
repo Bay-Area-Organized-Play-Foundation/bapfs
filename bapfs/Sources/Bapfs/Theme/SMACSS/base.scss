@@ -1,0 +1,178 @@
+// webfont kit
+/**
+ * @license
+ * MyFonts Webfont Build ID 3941635, 2020-08-29T18:10:51-0400
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: TarocaOT by Blue Vinyl Fonts
+ * URL: https://www.myfonts.com/fonts/bluevinyl/taroca/regular/
+ * Copyright: Copyright (c) 2005 by BV Fonts. All rights reserved.
+ *
+ *
+ *
+ * © 2020 MyFonts Inc
+*/
+  
+@font-face {
+  font-family: 'TarocaOT';
+  src: url('/webFonts/TarocaOT/font.woff2') format('woff2'), url('/webFonts/TarocaOT/font.woff') format('woff');
+}
+
+// base type
+$base-font-size: 1rem;
+$base-line-height: $base-font-size * 1.3;
+$scale: 1.200; // minor third https://type-scale.com
+
+$type-scale: (
+  huge:  $base-font-size * ($scale * $scale * $scale * $scale * $scale * $scale * $scale * $scale),
+  h1:    $base-font-size * ($scale * $scale * $scale * $scale * $scale),
+  h2:    $base-font-size * ($scale * $scale * $scale * $scale),
+  h3:    $base-font-size * ($scale * $scale * $scale),
+  h4:    $base-font-size * ($scale * $scale),
+  h5:    $base-font-size * ($scale),
+  body:  $base-font-size,
+  h6:    $base-font-size / $scale,
+  h7:    $base-font-size / ($scale * 2)
+);
+
+@function type-scale($level) {
+  @return map-get($type-scale, $level);
+}
+
+$line-height: (
+  h1:    $base-line-height * 1,
+  h2:    $base-line-height * 2,
+  h3:    $base-line-height * 1.5,
+  h4:    $base-line-height * 1.5,
+  h5:    $base-line-height * 1.5,
+  body:  $base-line-height * 1,
+  h6:    $base-line-height / 1.5,
+  h7:    $base-line-height / 1.3,
+);
+
+@function line-height($level) {
+  @return map-get($line-height, $level);
+}
+
+@mixin type-setting($level: 0) {
+  font-size: type-scale($level);
+  line-height: line-height($level);
+}
+
+// font family classes
+.roboto {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.mono {
+  font-family: 'Roboto Mono', monospace;
+}
+
+.taroca {
+  font-family: TarocaOT, helvetica;
+}
+
+// Breakpoints
+$breakpoints: (
+  small: 0px,
+  medium: 40em,
+  large: 65em,
+  xlarge: 75em,
+  xxlarge: 90em
+);
+
+@mixin breakpoint($bp, $rule: min-width) {
+  @media screen and (#{$rule}: map-get($breakpoints, $bp)) {
+    @content;
+  }
+}
+
+// transitions
+$transition-duration: 100ms;
+$duration: .5s;
+
+
+// colors
+
+// RGBA mixin
+@mixin rgba-background($hexcolor, $opacity) {
+  background-color: $hexcolor;
+  background-color: rgba($hexcolor, $opacity);
+}
+
+$black: #470809; 
+$white: #fefefe;
+$blue: #032862;
+$accent: #eac998;
+$dark-accent: #8b3417;
+$background: #efece6;
+$dark-background:#ffdcc1;
+
+// default button
+
+.base_button {
+  border: 1.5px solid $white;
+  background-color: transparent;
+  @extend .roboto;
+  font-weight:400;
+  padding: .4rem 1.25rem .4rem 1.25rem;
+  margin: 1rem 0;
+  cursor: pointer;
+  font-size: .9375rem;
+  transition-duration:$transition-duration;
+  color:$white;
+  text-decoration:none;
+  @include breakpoint(large) {
+    font-size: 1rem;
+  }
+  &:hover {
+    background-color: $white;
+    color: $black;
+    border-color: transparent;
+  }
+}
+
+// Show/hide classes
+
+.hide_medium_up {
+  display:block;
+  @include breakpoint(medium) {
+    display:none;
+  }
+}
+
+.hide_small_only {
+  display:none;
+  @include breakpoint(medium) {
+    display:block;
+  }
+}
+
+// italicize webfonts
+
+
+em {
+  font-style: italic;
+}
+
+
+// Show/hide classes
+
+.hide_medium_up {
+  display:block;
+  @include breakpoint(medium) {
+    display:none;
+  }
+}
+
+.hide_small_only {
+  display:none;
+  @include breakpoint(medium) {
+    display:block;
+  }
+}

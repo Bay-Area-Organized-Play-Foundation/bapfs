@@ -1,0 +1,400 @@
+#fixed_nav {
+  position: fixed;
+  width:100%;
+  z-index:9998;
+  top:0;
+  background-color: $black;
+  border-bottom: 2px solid #b9773f;
+  height:3rem;
+  @include breakpoint(medium) {
+    height:5rem;
+  }
+
+}
+
+a.active:after {
+  @include breakpoint(medium) {
+    display:block;
+    margin-top:.1rem;
+    content: '';
+    border-bottom: solid 1px $black;
+    transform: scaleX(1) !important;
+  }
+}
+
+// Small Nav Menu
+.menu_toggler {
+  position: fixed;
+  top: .8rem;
+  right: 1.5rem;
+  z-index: 9999;
+  height: 1rem;
+  width: 1rem;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  span,
+  span::before,
+  span::after {
+    position: absolute;
+    content: '';
+    width: 1.75rem;
+    height: 0.15rem;
+    background: $accent;
+    border-radius: 1rem;
+    transition: 500ms cubic-bezier(0.77, 0, 0.175, 1); 
+  }
+  span {
+    width: 1.5rem;
+  }
+  span::before {
+    top: -.5rem;
+  }
+  span::after {
+    top: .5rem;
+  }
+  &.active > span  {
+    background: transparent;
+  }
+  &.active > span::before,
+  &.active > span::after {
+    background: $accent;
+    top: 0;
+  }
+  &.active > span::before  {
+    transform: rotate(-225deg);
+  }
+  &.active > span::after  {
+    transform: rotate(225deg);
+  }
+  @include breakpoint(medium) {
+    display:none;
+  }
+}
+
+.menu {
+  position: fixed;
+  left: -100%;
+  z-index: 9998;
+  color: #005c9c;
+  @include rgba-background($black, 0.97);
+  width: 100%;
+  height: 100%;
+  padding: 0 0 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 300ms left cubic-bezier(0.77, 0, 0.175, 1);
+  &.active {
+    left: 0;
+  }
+  ul {
+    @extend .roboto;
+    text-align:right;
+    margin-top:-3rem;
+  }
+  li {
+    padding: 1rem 0;
+  }
+  a {
+    width:100%;
+    height:100%;
+    text-align:center;
+    margin-right:1rem;
+    font-size: 1.5rem;
+    text-align:right;
+    text-decoration:none;
+    font-weight:500;
+    color: $accent;
+    @include breakpoint(medium) {
+      font-size: 1rem;
+    }
+    @include breakpoint(large) {
+      font-size: 1.5rem;
+    }
+  }
+  @include breakpoint(medium) {
+    position:static;
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+    height:auto;
+    z-index:9999;
+    ul {
+      grid-column: span 8;
+      margin: -.1rem 1.5rem 0 0;
+    }
+    li {
+      display:inline-block;
+      margin:.75rem 1.5rem 0 0;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      &:last-of-type {
+        margin-right:0;
+      }
+    }
+    li a:after {
+      display:block;
+      margin-top:.1rem;
+      content: '';
+      border-bottom: solid 2px #b9773f;
+      transform: scaleX(0);
+      transition: transform 100ms ease-in-out;
+    }
+    li a:hover:after {
+      transform: scaleX(1);
+    }
+  }
+}
+
+// logo
+a.logo {
+  @extend .taroca;
+  @include type-setting(h4);
+  padding-left:1rem;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-decoration: none;
+  color:black;
+  text-align:left;
+  color: $accent;
+  line-height:1;
+  -webkit-text-stroke: .05rem #b9773f;
+  @include breakpoint(medium) {
+    @include type-setting(h4);
+    grid-column: span 4;
+    max-width: 20rem;
+    line-height:1;
+    padding-top:2.2rem;
+  }
+  @include breakpoint(large) {
+      @include type-setting(h2);
+      line-height:1;
+      padding-top:1.5rem;
+  }
+}
+
+.section_wrapper h2,
+.section_wrapper h1 {
+  @extend .taroca;
+  color:$blue;
+  @include type-setting(h1); 
+  margin:1.5rem 0 1.5rem 0;
+  text-align:center;
+  @include breakpoint(medium) {
+    @include type-setting(huge); 
+    margin-bottom:3rem;
+  }
+}
+
+.section_wrapper h1 {
+  margin-top:3rem;
+  @include breakpoint(medium) {
+    margin-top:6rem;
+  }
+}
+
+.itemList h4 {
+  @extend .roboto;
+  font-weight:bold;
+  @include type-setting(h3);
+  text-transform:uppercase;
+  padding:1rem 0;
+  &:first-letter { 
+    @include type-setting(h1);
+  }
+}
+
+.itemList p {
+  @extend .roboto;
+  @include type-setting(body);
+}
+
+.itemList {
+  padding:1rem;
+  text-align:center;
+  background: darken( $background, 3.33% );
+  border-radius: .1875rem;
+}
+
+.itemList a {
+  text-decoration:none;
+  color: $black;
+  h5 {
+    @extend .base_button;
+    color: $black;
+    border-color: $black;
+    width:50%;
+    margin: 1.5rem auto;
+    &:hover {
+      background: $blue;
+      color: $white;
+    }
+  }
+}
+
+.section_wrapper h1 {
+  line-height:1;
+}
+
+.section_wrapper h3 {
+  @extend .roboto;
+  @include type-setting(h3); 
+  font-weight:bold;
+  margin:1.5rem 0 .75rem 0;
+}
+
+.section_wrapper h4 {
+  @extend .roboto;
+  @include type-setting(h4); 
+  font-weight:bold;
+  margin:1rem 0 .75rem 0;
+}
+
+.section_wrapper h5 {
+  @extend .roboto;
+  @include type-setting(h5); 
+  text-transform:uppercase;
+  font-weight:bold;
+  margin:1rem 0 .75rem 0;
+}
+
+.post {
+  max-width: 40em;
+  margin:0 auto;
+}
+
+.post p{
+  font-family:roboto;
+  @include type-setting(body); 
+  padding-bottom:.5rem;
+}
+
+.section_wrapper .two_column p {
+  column-count:2;
+}
+
+.tagFilterIndex .tag {
+  display:block;
+  line-height:1.6;
+}
+
+.section_wrapper ol,
+.section_wrapper ul {
+  @extend .mono;
+  @include type-setting(body); 
+  margin:0 0 1.5rem 3rem;
+}
+
+.section_wrapper ol {
+  list-style:decimal;
+}
+
+.section_wrapper ul {
+  list-style:disc;
+}
+
+
+pre code {
+  @extend .mono;
+  @include type-setting(body); 
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  @include type-setting(body);
+  overflow: auto;
+  padding:1.5rem;
+  border-radius: .1875rem;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  @include type-setting(body);
+  overflow: auto;
+  padding:1.5rem;
+  border-radius: .1875rem;
+  margin-bottom:1.5rem;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 1.5rem 0;
+    @include breakpoint(medium) {
+      margin: 3rem 0;
+    }
+}
+
+.tag-list a {
+  margin-right:.2rem;
+}
+
+.tag-list a,
+p a,
+footer a,
+.section_wrapper ol a,
+.section_wrapper ul a {
+  display:inline-block;
+  color:$blue;
+  text-decoration:none;
+  &:after {
+      display:block;
+      margin-top:.1rem;
+      content: '';
+      border-bottom: solid 1px $blue;
+      transform: scaleX(0);
+      transition: transform 100ms ease-in-out;
+    }
+    &:hover:after {
+      transform: scaleX(1);
+    }
+
+}
+
+blockquote {
+  position:relative;
+  background: darken( $background, 3.33% );
+  border-radius: .1875rem;
+  padding:1rem;
+  margin-bottom:1.5rem;
+  color: $black;
+  margin-right:1rem;
+  p {
+    text-indent:1rem;
+  }
+  &:before {
+    @extend .taroca;
+    content:"“";
+    font-size:350%;
+    position:absolute;    
+    color: darken( $background, 33% );;
+    top:.25rem;
+    left:.5rem;
+  }
+}
+
+footer {
+  background-color: $black;
+  padding:1.5rem;
+  color:$white;
+  @include breakpoint(medium) {
+    padding:3rem;
+  } 
+}

@@ -1,0 +1,35 @@
+body {
+  background:$background;
+}
+
+.wrapper {
+  margin-top:2.5rem;
+  min-height: calc(100vh - (3rem + 3rem));
+  @include breakpoint(medium) {
+    margin-top:5rem;
+    min-height: calc(100vh - (3rem + 5rem));
+  }
+}
+
+.section_wrapper {
+  display:grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 1rem;
+  width:96%;
+  max-width:60rem;
+  margin:1.5rem auto;
+  @include breakpoint(medium) {
+    margin:3rem auto;
+  }
+}
+
+.span12 {
+  grid-column: span 12;
+}
+
+.span6 {
+  grid-column: span 12;
+  @include breakpoint(medium) {
+    grid-column: span 6;
+  }
+}
