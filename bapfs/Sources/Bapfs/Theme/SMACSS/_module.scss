@@ -159,12 +159,12 @@ a.logo {
     grid-column: span 4;
     max-width: 20rem;
     line-height:1;
-    padding-top:2.2rem;
+    padding-top:1rem;
   }
   @include breakpoint(large) {
       @include type-setting(h2);
       line-height:1;
-      padding-top:1.5rem;
+      
   }
 }
 
