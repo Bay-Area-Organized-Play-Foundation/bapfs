@@ -2,6 +2,8 @@ body {
   background:$background;
 }
 
+// content wrapper
+
 .wrapper {
   margin-top:2.5rem;
   min-height: calc(100vh - (3rem + 3rem));
@@ -10,6 +12,8 @@ body {
     min-height: calc(100vh - (3rem + 5rem));
   }
 }
+
+// start the grid
 
 .section_wrapper {
   display:grid;
@@ -23,8 +27,17 @@ body {
   }
 }
 
+// add grid classes that span columns columns with breakpoints, as needed
+
 .span12 {
   grid-column: span 12;
+}
+
+.span8 {
+  grid-column: span 12;
+  @include breakpoint(medium) {
+    grid-column: span 8;
+  }
 }
 
 .span6 {
@@ -32,4 +45,30 @@ body {
   @include breakpoint(medium) {
     grid-column: span 6;
   }
+}
+
+.span4 {
+  grid-column: span 12;
+  @include breakpoint(medium) {
+    grid-column: span 4;
+  }
+}
+
+// form layout
+
+form {
+  display:grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 1rem;
+}
+
+.form_half {
+  grid-column: span 12;
+  @include breakpoint(medium) {
+    grid-column: span 6;
+  }
+}
+
+.form_full {
+  grid-column: span 12;
 }

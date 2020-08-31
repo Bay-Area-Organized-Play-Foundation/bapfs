@@ -65,7 +65,7 @@ $line-height: (
 }
 
 // font family classes
-.roboto {
+.sans {
   font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -73,7 +73,7 @@ $line-height: (
   font-family: 'Roboto Mono', monospace;
 }
 
-.taroca {
+.serif {
   font-family: TarocaOT, helvetica;
 }
 
@@ -109,16 +109,14 @@ $black: #470809;
 $white: #fefefe;
 $blue: #032862;
 $accent: #eac998;
-$dark-accent: #8b3417;
 $background: #efece6;
-$dark-background:#ffdcc1;
 
 // default button
 
 .base_button {
   border: 1.5px solid $white;
   background-color: transparent;
-  @extend .roboto;
+  @extend .sans;
   font-weight:400;
   padding: .4rem 1.25rem .4rem 1.25rem;
   margin: 1rem 0;
@@ -154,8 +152,6 @@ $dark-background:#ffdcc1;
 }
 
 // italicize webfonts
-
-
 em {
   font-style: italic;
 }

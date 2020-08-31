@@ -1,3 +1,5 @@
+// nav bar
+
 #fixed_nav {
   position: fixed;
   width:100%;
@@ -5,25 +7,15 @@
   top:0;
   background-color: $black;
   border-bottom: 2px solid #b9773f;
-  height:3rem;
+  height:3rem;  
   @include breakpoint(medium) {
     height:5rem;
-  }
-
-}
-
-a.active:after {
-  @include breakpoint(medium) {
-    display:block;
-    margin-top:.1rem;
-    content: '';
-    border-bottom: solid 1px $black;
-    transform: scaleX(1) !important;
   }
 }
 
 // Small Nav Menu
-.menu_toggler {
+
+.menu_toggler { 
   position: fixed;
   top: .8rem;
   right: 1.5rem;
@@ -90,7 +82,7 @@ a.active:after {
     left: 0;
   }
   ul {
-    @extend .roboto;
+    @extend .sans;
     text-align:right;
     margin-top:-3rem;
   }
@@ -150,7 +142,7 @@ a.active:after {
 
 // logo
 a.logo {
-  @extend .taroca;
+  @extend .serif;
   @include type-setting(h4);
   padding-left:1rem;
   position: relative;
@@ -176,9 +168,11 @@ a.logo {
   }
 }
 
-.section_wrapper h2,
-.section_wrapper h1 {
-  @extend .taroca;
+// general typography
+
+article h2,
+article h1 {
+  @extend .serif;
   color:$blue;
   @include type-setting(h1); 
   margin:1.5rem 0 1.5rem 0;
@@ -190,15 +184,131 @@ a.logo {
   }
 }
 
-.section_wrapper h1 {
-  margin-top:3rem;
-  @include breakpoint(medium) {
-    margin-top:6rem;
+article h3 {
+  @extend .sans;
+  @include type-setting(h3); 
+  font-weight:bold;
+  margin:1.5rem 0 .75rem 0;
+}
+
+article h4 {
+  @extend .sans;
+  @include type-setting(h4); 
+  font-weight:bold;
+  margin:1rem 0 .75rem 0;
+}
+
+article h5 {
+  @extend .sans;
+  @include type-setting(h5); 
+  text-transform:uppercase;
+  font-weight:bold;
+  margin:1rem 0 .75rem 0;
+}
+
+article p {
+  font-family:roboto;
+  @include type-setting(body); 
+  padding-bottom:.5rem;
+}
+
+article ol,
+article ul {
+  @extend .mono;
+  @include type-setting(body); 
+  margin:0 0 1.5rem 3rem;
+}
+
+article ol {
+  list-style:decimal;
+}
+
+article ul {
+  list-style:disc;
+}
+
+pre code {
+  @extend .mono;
+  @include type-setting(body); 
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  @include type-setting(body);
+  overflow: auto;
+  padding:1.5rem;
+  border-radius: .1875rem;
+  margin-bottom:1.5rem;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+aside h3 {
+  @extend .serif;
+  color:$blue;
+  @include type-setting(h2); 
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align:center;
+}
+
+blockquote {
+  position:relative;
+  background: darken( $background, 3.33% );
+  border-radius: .1875rem;
+  padding:1rem;
+  margin-bottom:1.5rem;
+  color: $black;
+  margin-right:1rem;
+  p {
+    text-indent:1rem;
+  }
+  &:before {
+    @extend .serif;
+    content:"“";
+    font-size:350%;
+    position:absolute;    
+    color: darken( $background, 33% );
+    top:.25rem;
+    left:.5rem;
   }
 }
 
+.tag-list a,
+p a,
+footer a,
+.section_wrapper ol a,
+.section_wrapper ul a {
+  display:inline-block;
+  color:$blue;
+  text-decoration:none;
+  &:after {
+      display:block;
+      margin-top:.1rem;
+      content: '';
+      border-bottom: solid 1px $blue;
+      transform: scaleX(0);
+      transition: transform 100ms ease-in-out;
+    }
+    &:hover:after {
+      transform: scaleX(1);
+    }
+}
+
+// post indexes
+
 .itemList h4 {
-  @extend .roboto;
+  @extend .sans;
   font-weight:bold;
   @include type-setting(h3);
   text-transform:uppercase;
@@ -209,7 +319,7 @@ a.logo {
 }
 
 .itemList p {
-  @extend .roboto;
+  @extend .sans;
   @include type-setting(body);
 }
 
@@ -236,101 +346,35 @@ a.logo {
   }
 }
 
-.section_wrapper h1 {
-  line-height:1;
+.tagFilterIndex .tag {
+  display:block;
+  line-height:1.6;
 }
 
-.section_wrapper h3 {
-  @extend .roboto;
-  @include type-setting(h3); 
-  font-weight:bold;
-  margin:1.5rem 0 .75rem 0;
+.tag-list {
+  @include type-setting(h7);
+  font-style:italic;
 }
 
-.section_wrapper h4 {
-  @extend .roboto;
-  @include type-setting(h4); 
-  font-weight:bold;
-  margin:1rem 0 .75rem 0;
+.tag-list a {
+  margin-right:.2rem;
 }
 
-.section_wrapper h5 {
-  @extend .roboto;
-  @include type-setting(h5); 
-  text-transform:uppercase;
-  font-weight:bold;
-  margin:1rem 0 .75rem 0;
-}
+// single page posts
 
 .post {
   max-width: 40em;
   margin:0 auto;
 }
 
-article p{
-  font-family:roboto;
-  @include type-setting(body); 
-  padding-bottom:.5rem;
+.post h1 {
+  margin-top: 3rem;
+  @include breakpoint(medium) {
+    margin-top:4rem;
+  }
 }
 
-.section_wrapper .two_column p {
-  column-count:2;
-}
-
-.tagFilterIndex .tag {
-  display:block;
-  line-height:1.6;
-}
-
-.section_wrapper ol,
-.section_wrapper ul {
-  @extend .mono;
-  @include type-setting(body); 
-  margin:0 0 1.5rem 3rem;
-}
-
-.section_wrapper ol {
-  list-style:decimal;
-}
-
-.section_wrapper ul {
-  list-style:disc;
-}
-
-
-pre code {
-  @extend .mono;
-  @include type-setting(body); 
-  margin: 0;
-  padding: 0;
-  white-space: pre;
-  border: none;
-  background: transparent;
-}
-
-.highlight pre {
-  background-color: #f8f8f8;
-  border: 1px solid #cccccc;
-  @include type-setting(body);
-  overflow: auto;
-  padding:1.5rem;
-  border-radius: .1875rem;
-}
-
-pre {
-  background-color: #f8f8f8;
-  border: 1px solid #cccccc;
-  @include type-setting(body);
-  overflow: auto;
-  padding:1.5rem;
-  border-radius: .1875rem;
-  margin-bottom:1.5rem;
-}
-
-pre code, pre tt {
-  background-color: transparent;
-  border: none;
-}
+//  divider
 
 hr {
     border: 0;
@@ -343,53 +387,78 @@ hr {
     }
 }
 
-.tag-list a {
-  margin-right:.2rem;
+// form elements
+
+legend {
+  margin-bottom:-.5rem;
 }
 
-.tag-list a,
-p a,
-footer a,
-.section_wrapper ol a,
-.section_wrapper ul a {
-  display:inline-block;
-  color:$blue;
-  text-decoration:none;
-  &:after {
-      display:block;
-      margin-top:.1rem;
-      content: '';
-      border-bottom: solid 1px $blue;
-      transform: scaleX(0);
-      transition: transform 100ms ease-in-out;
-    }
-    &:hover:after {
-      transform: scaleX(1);
-    }
+label {
+  display:block;
+  @extend .serif;
+  font-size:1rem;
+  line-height:1;
+  padding-bottom:.25rem;
+  color:$black;
+  margin-top:1rem;
+}
+
+textarea, input, button, select { 
+  @extend .sans;
+  padding: .5rem;
+  -webkit-appearance: none;
+  border-radius:0;
+  color:$black;
 
 }
 
-blockquote {
-  position:relative;
+input, textarea {
+  border-style:none;
+  width:100%;
+  border:.1rem solid $accent;
+  font-size:1rem;
+  @extend .sans;
+  font-weight:600;
   background: darken( $background, 3.33% );
-  border-radius: .1875rem;
-  padding:1rem;
-  margin-bottom:1.5rem;
-  color: $black;
-  margin-right:1rem;
-  p {
-    text-indent:1rem;
+  transition-duration: $transition-duration;
+}
+
+input:focus, textarea:focus {
+  outline:none;
+  @extend .sans;
+  font-weight:600;
+
+  border:.1rem solid black;
+  color:black;
+  background:white;
+}
+
+textarea {
+  resize:vertical;
+  height:8rem;
+}
+
+// content sections
+.featured_panel article p {
+  padding: 1.5rem;
+  @include type-setting(h4);
+}
+
+button {
+  @extend .base_button;
+  color:$black;
+  border-color: $black;
+  width:100%;
+  @include breakpoint(medium) {
+    width:50%;
   }
-  &:before {
-    @extend .taroca;
-    content:"“";
-    font-size:350%;
-    position:absolute;    
-    color: darken( $background, 33% );;
-    top:.25rem;
-    left:.5rem;
+  &:hover {
+    background: $black;
+    color:$white;
   }
 }
+
+// footer
 
 footer {
   background-color: $black;
@@ -398,4 +467,44 @@ footer {
   @include breakpoint(medium) {
     padding:3rem;
   } 
+}
+
+footer p {
+  color:$accent;
+  @extend .sans;
+  @include type-setting(body);
+  text-align:center;
+}
+
+.footer-legal {
+  @include type-setting(h7);
+  max-width:30rem;
+  margin:0 auto;
+  line-height:1.2;
+  padding-top:1.5rem;
+  text-align:left;
+}
+
+.mailing_list_signup {
+  text-align:right;
+  color: $accent;
+}
+
+.mailing_list_signup h5 {
+  @extend .serif;
+}
+
+.mailing_list_signup a {
+  @extend .base_button;
+  color: $white;
+  border-color: $white;
+  width:50%;
+  margin: 1.5rem auto;
+  width:auto;
+  text-decoration:none;
+  margin:0;
+  &:hover {
+    background: $accent;
+    color: $black;
+  }
 }

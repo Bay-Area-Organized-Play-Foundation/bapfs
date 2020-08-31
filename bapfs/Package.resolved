@@ -47,15 +47,6 @@
         }
       },
       {
-        "package": "SassPublishPlugin",
-        "repositoryURL": "https://github.com/hejki/sasspublishplugin",
-        "state": {
-          "branch": null,
-          "revision": "69c4bfd316e474c85a8ebac589ef91d0baa5a546",
-          "version": "0.1.0"
-        }
-      },
-      {
         "package": "ShellOut",
         "repositoryURL": "https://github.com/johnsundell/shellout.git",
         "state": {
@@ -71,24 +62,6 @@
           "branch": null,
           "revision": "801c2878e4c6c5baf32fe132e1f3f3af6f9fd1b0",
           "version": "0.4.0"
-        }
-      },
-      {
-        "package": "libsass",
-        "repositoryURL": "https://github.com/robinwalterfit/Swift-libsass.git",
-        "state": {
-          "branch": null,
-          "revision": "9d48a04eda5a98d7a934ce40249a7275d11f3236",
-          "version": "1.0.0"
-        }
-      },
-      {
-        "package": "Sass",
-        "repositoryURL": "https://github.com/robinwalterfit/Swift-Sass.git",
-        "state": {
-          "branch": null,
-          "revision": "6a2ba673e1f0bdbdbf3e2eb871229bc0e7354fbe",
-          "version": "1.0.1"
         }
       }
     ]

@@ -11,15 +11,13 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(name: "Publish", url: "https://github.com/johnsundell/publish.git", from: "0.6.0"),
-        .package(name: "SassPublishPlugin", url: "https://github.com/hejki/sasspublishplugin", from: "0.1.0")
+        .package(name: "Publish", url: "https://github.com/johnsundell/publish.git", from: "0.6.0")
     ],
     targets: [
         .target(
             name: "Bapfs",
             dependencies: [
-                "Publish",
-                "SassPublishPlugin"
+                "Publish"
             ]
         )
     ]

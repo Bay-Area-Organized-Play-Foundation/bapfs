@@ -10,7 +10,7 @@ public extension Theme {
         Theme(
             htmlFactory: BapfsHTMLFactory(),
             resourcePaths: [
-            ]
+            ] // no need for pathhs since we're compiling sass into Resources folder and copying that over in main
         )
     }
 }
@@ -33,8 +33,11 @@ private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
                          .article(
                             .h2("Welcome to the Bay!"),
                             .img(.id("d20"), .src("/images/d20.svg")),
-                            .h4("Pathfinder &amp; Starfinder Society games in San Francisco Bay Area"),
-                            .a(.class("base_button"), .href("/events/"), .text("Find a Game"))
+                            .h4("Organized Play in the Caligornia Bay Area"),
+                            .a(.class("base_button"),
+                               .href("/events/"),
+                               .text("Find a Game")
+                            ) // a.base_button
                         )
                     ), // section#home_hero
                     .section(.class("section_wrapper"),
@@ -70,7 +73,7 @@ private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
             ) // body
         ) // html
     }
-
+    
     func makeSectionHTML(for section: Section<Site>, context: PublishingContext<Site>) throws -> HTML {
         HTML(
             .lang(context.site.language),
@@ -79,7 +82,9 @@ private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
                 .header(for: context, selectedSection: section.id),
                 .wrapper(
                     .section(.class("section_wrapper"),
-                             .article(.class("span12 post"), .contentBody(section.body))
+                        .article(.class("span12 post"),
+                            .contentBody(section.body)
+                        ) // article.span12 post
                     ),
                     .itemList(for: section.items, on: context.site)
                 ), // wrapper
@@ -206,8 +211,8 @@ private extension Node where Context == HTML.BodyContext { static func wrapper(_
                     }) // ul
                 ) // .menu
             ) // #fixed_nav
-        )
-    }
+        ) // header
+    } // node
 
     static func itemList<T: Website>(for items: [Item<T>], on site: T) -> Node {
         return .section(.class("section_wrapper"),
@@ -222,28 +227,47 @@ private extension Node where Context == HTML.BodyContext { static func wrapper(_
                         ) // div
                     ) // a.itemListLink
                 ) // article.span6
-            }
-        )
-    }
+            } // forEach
+        ) // sectino
+    } // node
 
     static func tagList<T: Website>(for item: Item<T>, on site: T) -> Node {
-        return .p(.class("tag-list"),  .forEach(item.tags) { tag in
-            .a(
-                .href(site.path(for: tag)),
-                .text(tag.string)
-            )
-        })
-    }
+        return .p(.class("tag-list"),
+            .forEach(item.tags) { tag in
+                .a(
+                    .href(site.path(for: tag)),
+                    .text(tag.string)
+                ) // a
+            } // forEach
+        ) //p.tag-list
+    } // node
 
+    static func contactForm<T: Website>(for site: T) -> Node {
+        return .h2("Here's your form")
+    } // node
+    
     static func footer<T: Website>(for site: T) -> Node {
         return .footer(
-            .p(
-                .text("&copy; 2020 San Francisco Organized Play")
-            ),
-            .p(
-                .class("footer-legal"),
-                .text("This promotional notice uses trademarks and/or copyrights owned by Paizo Publishing, LLC, which are under Paizo's community use policy. We are expressly prohibited from charging you to use or access this content. This promotional notice is not published, endorsed, or specifically approved by Paizo Publishing. For more information about Paizo's Community Use Policy, please visit paizo.com/ paizo/ about/ communityuse. For more information about Paizo Publishing and Paizo Products, please visit paizo.com.")
-            )
-        )
-    }
+            .section(.class("section_wrapper"),
+                .article(.class("span12"),
+                    .p(
+                        .text("&copy; 2020 San Francisco Organized Play")
+                    )
+                ), // article.span12
+                .article(.class("span4"),
+                    .p(
+                        .class("footer-legal"),
+                        .text("This promotional notice uses trademarks and/or copyrights owned by Paizo Publishing, LLC, which are under Paizo's community use policy. We are expressly prohibited from charging you to use or access this content. This promotional notice is not published, endorsed, or specifically approved by Paizo Publishing. For more information about Paizo's Community Use Policy, please visit paizo.com/ paizo/ about/ communityuse. For more information about Paizo Publishing and Paizo Products, please visit paizo.com.")
+                    ) // p
+                ), // article.span4
+                .article(.class("span8 mailing_list_signup"),
+                    .h5("Join Our Mailing List"),
+                    .a(
+                        .href("http://eepurl.com/gXlnpf"),
+                        .text("Sign up on Mail Chimp")
+                    ) // a
+                ) // article.span4
+            ) // section.section_wrapper
+        ) // footer
+    } // node
 }

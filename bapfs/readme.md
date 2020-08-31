@@ -1,10 +1,6 @@
 # BAPFS Readme
 
-## Dependencies
-This project has a sass dependency.
-https://github.com/Hejki/SassPublishPlugin
-
-To compile css, cd into the root directory of this project, and run this command in terminal:
+To compile css, cd into the root directory of this project, and run this command in terminal after you've installes sass:
 ```
 sass --watch Sources/Bapfs/Theme/smacss/styles.scss:Resources/styles.css --style compressed
 ```
