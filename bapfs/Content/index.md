@@ -1,6 +1,12 @@
 ---
-
+title: Home
+description: We organize Pathfinder and Starfinder Society tabletop events online and throughout the Bay Area. New players are always welcome! 
 ---
-## We Play Games
 
-We offer [Pathfinder and Starfinder Society](https://paizo.com/organizedplay) tabletop games at a variety of locations in the San Francisco Bay Area. New players are always welcome. Organized Play memberships are free — just contact us or ask one of the Event Coordinators before any game for some help. 
+## Gaming in the Bay Area
+
+We organize [Pathfinder and Starfinder Society](https://paizo.com/organizedplay) tabletop events online and in person throughout the Bay Area. New players are always welcome! 
+
+<a class="callout_button" href="/new_players/"><h5>New Players start here</h5></a>
+
+<hr>

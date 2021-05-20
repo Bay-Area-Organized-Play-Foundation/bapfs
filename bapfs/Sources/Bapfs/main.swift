@@ -7,7 +7,8 @@ struct Bapfs: Website {
     enum SectionID: String, WebsiteSectionID {
         // sections
         case games
-        case conventions
+//        case conventions
+        case new_players
         case resources
         case news
         case contact

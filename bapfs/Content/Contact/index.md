@@ -1,13 +1,10 @@
 ---
+title: Contact
+description: Contact the Organized Play Foundation volunteers.
 ---
-# Contact
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+# Drop us a Line
 
 <form>
-    <div class="form_full">
-        <legend><h3>Drop us a Line</h3></legend>
-    </div>
     <div class="form_half">
       <label for="name">Your Name*</label>
       <input type="text" name="name" placeholder="Name">
@@ -24,3 +21,14 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
         <button type="submit" id="submit" name="submit" value="submit" class="callout-button-no-pad contact-form-button">Send Message</button>
     </div>
 </form>
+
+### Venture Captains
+
+- South Bay/ San francisco: John and Wendy-Ann Francis
+- Easy Bay: Dennis Muldoon
+
+### Venture Lieutenants
+List them here with areas
+
+### Venture Agents
+List them here with stores

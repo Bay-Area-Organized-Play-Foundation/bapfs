@@ -17,11 +17,12 @@
 
 .menu_toggler { 
   position: fixed;
-  top: .8rem;
-  right: 1.5rem;
+  top: 0rem;
+  right: 0rem;
   z-index: 9999;
-  height: 1rem;
-  width: 1rem;
+  height: 3rem;
+  width: 3rem;
+  padding:1.5rem 2.5rem 1.5rem 1.5rem;
   outline: none;
   cursor: pointer;
   display: flex;
@@ -68,6 +69,7 @@
 .menu {
   position: fixed;
   left: -100%;
+  top:0;
   z-index: 9998;
   color: #005c9c;
   @include rgba-background($black, 0.97);
@@ -88,6 +90,9 @@
   }
   li {
     padding: 1rem 0;
+    @include breakpoint(medium) {
+      text-align:center;
+    }
   }
   a {
     width:100%;
@@ -143,7 +148,7 @@
 // logo
 a.logo {
   @extend .serif;
-  @include type-setting(h4);
+  @include type-setting(h5);
   padding-left:1rem;
   position: relative;
   top: 50%;
@@ -214,7 +219,7 @@ article p {
 
 article ol,
 article ul {
-  @extend .mono;
+  @extend .sans;
   @include type-setting(body); 
   margin:0 0 1.5rem 3rem;
 }
@@ -225,6 +230,15 @@ article ol {
 
 article ul {
   list-style:disc;
+}
+
+code {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  @include type-setting(body);
+  overflow: auto;
+  padding:.05rem .15rem;
+  border-radius: .1875rem;
 }
 
 pre code {
@@ -289,6 +303,7 @@ p a,
 footer a,
 .section_wrapper ol a,
 .section_wrapper ul a {
+  @include type-setting(h6);
   display:inline-block;
   color:$blue;
   text-decoration:none;
@@ -330,9 +345,11 @@ footer a,
   border-radius: .1875rem;
 }
 
-.itemList a {
+.itemList a,
+.callout_button {
   text-decoration:none;
   color: $black;
+  text-align:center;
   h5 {
     @extend .base_button;
     color: $black;
@@ -379,11 +396,10 @@ footer a,
 hr {
     border: 0;
     height: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 10px solid $blue;
     margin: 1.5rem 0;
     @include breakpoint(medium) {
-      margin: 3rem 0;
+      margin: 6rem 0 3rem 0;
     }
 }
 
@@ -455,6 +471,7 @@ button {
   &:hover {
     background: $black;
     color:$white;
+    text-decoration:none;
   }
 }
 
@@ -476,13 +493,17 @@ footer p {
   text-align:center;
 }
 
+.footer-info p {
+  text-align:right;
+}
+
 .footer-legal {
   @include type-setting(h7);
   max-width:30rem;
-  margin:0 auto;
+  margin:0;
+  float:right;
   line-height:1.2;
   padding-top:1.5rem;
-  text-align:left;
 }
 
 .mailing_list_signup {
@@ -496,8 +517,8 @@ footer p {
 
 .mailing_list_signup a {
   @extend .base_button;
-  color: $white;
-  border-color: $white;
+  color: $accent;
+  border-color: $accent;
   width:50%;
   margin: 1.5rem auto;
   width:auto;
@@ -506,5 +527,8 @@ footer p {
   &:hover {
     background: $accent;
     color: $black;
+    &:after {
+      border-bottom: solid 1px $accent;
+    }
   }
 }

@@ -2,26 +2,32 @@
   display:block;
   width:100%;
   height:50vh;
-  background:linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/index_hero.jpg');
+  background:linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, .15)), url('/images/dragon.jpg');
   background-size:cover;
-  background-position:center left;
+  background-position:center center;
   overflow:hidden;
   position:relative;
   @include breakpoint(medium) {
-    background-position:center center;
+    height:66vh;
   }
 }
 
 #home_hero article {
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 66%;
+  transform: translateY(-66%);
   width:96%;
   max-width:40rem;
   margin: 0 auto;
   text-align:center;
+  @include breakpoint(medium) {
+    top: 70%;
+    transform: translateY(-70%);
+  }
   @include breakpoint(large) {
     max-width:60rem;
+    top: 75%;
+    transform: translateY(-75%);
   }
 }
 
@@ -30,21 +36,23 @@
   @include type-setting(h2);
   color: $background;
   text-align:center;
-  margin-bottom:.5rem;
+  margin-bottom:1rem;
+  -webkit-text-stroke: 1px $black;
   @include breakpoint(medium) {
+    @include type-setting(h2);
     font-size:3rem;
-  }
-  @include breakpoint(large) {
-    @include type-setting(huge);
+    margin-bottom:2rem;
   }
 }
 
-#home_hero #d20 {
-  margin: 0rem auto 1rem auto;
-  width:2rem;
-  height:auto;
-  @include breakpoint(medium) {
-    margin: .5rem auto .5rem auto;
+#home_hero .base_button {
+  color:$black;
+  background:$background;
+  border:.1rem solid $black;
+  font-weight:bold;
+  &:hover {
+    background:$black;
+    color:$background;
   }
 }
 
@@ -53,4 +61,112 @@
   @include type-setting(h6);
   margin-bottom: 2rem;
   color: $background;
+}
+
+#games_hero {
+  display:block;
+  width:100%;
+  height:40vh;
+  background:linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, .4)), url('/images/games_hero.jpg');
+  background-size:cover;
+  background-position:bottom right;
+  overflow:hidden;
+  position:relative;
+  @include breakpoint(medium) {
+    height:50vh;
+    background-position:bottom center;
+  }
+}
+
+#new_hero {
+  display:block;
+  width:100%;
+  height:40vh;
+  background:linear-gradient(0deg, rgba(0, 0, 0, .40), rgba(0, 0, 0, .40)), url('/images/new.jpg');
+  background-size:cover;
+  background-position:center right;
+  overflow:hidden;
+  position:relative;
+  @include breakpoint(medium) {
+    height:50vh;
+    background-position:center center;
+  }
+}
+
+#news_hero {
+  display:block;
+  width:100%;
+  height:40vh;
+  background:#032862;
+  background-image:linear-gradient(0deg, rgba(0, 0, 0, .40), rgba(0, 0, 0, .40)), url('/images/news.jpg');
+  background-size:cover;
+  background-position:top right;
+  background-repeat:no-repeat;
+  overflow:hidden;
+  position:relative;
+  @include breakpoint(medium) {
+    height:50vh;
+  }
+}
+
+#contact_hero {
+  display:block;
+  width:100%;
+  height:40vh;
+  background:#032862;
+  background-image:linear-gradient(0deg, rgba(0, 0, 0, .40), rgba(0, 0, 0, .40)), url('/images/contact.jpg');
+  background-size:cover;
+  background-position:center right;
+  background-repeat:no-repeat;
+  overflow:hidden;
+  position:relative;
+  @include breakpoint(medium) {
+    height:50vh;
+  }
+}
+
+#resource_hero {
+  display:block;
+  width:100%;
+  height:40vh;
+  background:linear-gradient(0deg, rgba(0, 0, 0, .40), rgba(0, 0, 0, .40)), url('/images/resources.jpg');
+  background-size:cover;
+  background-position:center center;
+  overflow:hidden;
+  position:relative;
+  @include breakpoint(medium) {
+    height:50vh;
+    background-position:center center;
+  }
+}
+
+#games_hero article,
+#new_hero article,
+#resource_hero article,
+#news_hero article,
+#contact_hero article {
+  position: relative;
+  top: 45%;
+  transform: translateY(-45%);
+  width:96%;
+  max-width:40rem;
+  margin: 0 auto;
+  text-align:center;
+}
+
+#games_hero article h2,
+#new_hero article h2,
+#resource_hero article h2,
+#news_hero article h2,
+#contact_hero article h2 {
+  @extend .serif;
+  @include type-setting(h2);
+  color: $background;
+  text-align:center;
+  margin-bottom:1rem;
+  @include breakpoint(medium) {
+    @include type-setting(h2);
+    font-size:3rem;
+    margin-bottom:2rem;
+  }
 }

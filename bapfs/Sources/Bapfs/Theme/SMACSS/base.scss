@@ -45,7 +45,8 @@ $type-scale: (
 }
 
 $line-height: (
-  h1:    $base-line-height * 1,
+  huge:  $base-line-height * 3,
+  h1:    $base-line-height * 1.6,
   h2:    $base-line-height * 2,
   h3:    $base-line-height * 1.5,
   h4:    $base-line-height * 1.5,

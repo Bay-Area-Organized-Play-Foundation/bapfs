@@ -1,4 +1,6 @@
 ---
+title: Conventions
+description: Contact the Organized Play FOundation volunteers.
 ---
 # Conventions
 
@@ -19,4 +21,4 @@ We are also looking at expanding: since everything will be held virtually, we ma
 
 #### Registration
 
-You can register on [Warhorn](https://warhorn.net/events/pandemic-pacificon-2020).
+You can register on **[Warhorn](https://warhorn.net/events/pandemic-pacificon-2020).**

@@ -1,20 +1,19 @@
 /**
  BAPFS Theme
 */
+import Foundation
 import Plot
 import Publish
-
 
 public extension Theme {
     static var Bapfs: Self {
         Theme(
             htmlFactory: BapfsHTMLFactory(),
             resourcePaths: [
-            ] // no need for pathhs since we're compiling sass into Resources folder and copying that over in main
+            ] // no need for paths since we're compiling sass into Resources folder and copying that over in main
         )
     }
 }
-
 private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
     func makeIndexHTML(for index: Index, context: PublishingContext<Site>) throws -> HTML {
         HTML(
@@ -31,68 +30,179 @@ private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
                 .wrapper(
                     .section(.id("home_hero"),
                          .article(
-                            .h2("Welcome to the Bay!"),
-                            .img(.id("d20"), .src("/images/d20.svg")),
-                            .h4("Organized Play in the Caligornia Bay Area"),
+                            .h2("Welcome to Org Play!"),
                             .a(.class("base_button"),
-                               .href("/events/"),
+                               .href("/games/"),
                                .text("Find a Game")
                             ) // a.base_button
                         )
                     ), // section#home_hero
                     .section(.class("section_wrapper"),
-                        .article(.class("span12"),
+                        .article(.class("span12 post"),
                             .contentBody(index.body)
                          ) // article
                     ), // section.section_wrapper
+                    .article(
+                        .h2("Recent Articles")
+                    ),
                     .itemList(
                         for: context.allItems(
                             sortedBy: \.date,
-                            order: .descending
+                            order: .ascending
                         ),
                         on: context.site
                     ) // itemlist
                 ), // div.wrapper
-                .footer(for: context.site),
-                .raw("""
-                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-                        <script type="text/javascript">
-                        const toggler = document.querySelector('.menu_toggler');
-                        const menu    = document.querySelector('.menu');
-
-                        /*
-                         * Toggles on and off the 'active' class on the menu
-                         * and the toggler button.
-                         */
-                        toggler.addEventListener('click', () => {
-                          toggler.classList.toggle('active');
-                          menu.classList.toggle('active');
-                        })
-                        </script>
-                    """) // raw -- Jam in some libs and simple js
+                .footer(for: context.site)
             ) // body
         ) // html
     }
+
     
     func makeSectionHTML(for section: Section<Site>, context: PublishingContext<Site>) throws -> HTML {
-        HTML(
-            .lang(context.site.language),
-            .head(for: section, on: context.site),
-            .body(
-                .header(for: context, selectedSection: section.id),
-                .wrapper(
-                    .section(.class("section_wrapper"),
-                        .article(.class("span12 post"),
-                            .contentBody(section.body)
-                        ) // article.span12 post
-                    ),
-                    .itemList(for: section.items, on: context.site)
-                ), // wrapper
-                .footer(
-                    for: context.site
-                ) // footer
-            ) // body
-        ) // html
+        switch section.id.rawValue {
+        case "home":
+        return HTML(.text("Hello home!"))
+        case "games":
+            return HTML(
+                .lang(context.site.language),
+                .head(for: section, on: context.site),
+                .body(
+                    .header(for: context, selectedSection: section.id),
+                    .wrapper(
+                        .section(.id("games_hero"),
+                             .article(
+                                .h2("Games")
+                            )
+                        ), // games_hero
+                        .section(.class("section_wrapper"),
+                            .article(.class("span12 post"),
+                                .contentBody(section.body)
+                            ) // article.span12 post
+                        ),
+                        .itemList(for: section.items, on: context.site)
+                    ), // wrapper
+                    .footer(
+                        for: context.site
+                    ) // footer
+                ) // body
+            ) // html
+        case "new_players":
+            return HTML(
+                .lang(context.site.language),
+                .head(for: section, on: context.site),
+                .body(
+                    .header(for: context, selectedSection: section.id),
+                    .wrapper(
+                        .section(.id("new_hero"),
+                             .article(
+                                .h2("Beginning your Journey")
+                            )
+                        ), // games_hero
+                        .section(.class("section_wrapper"),
+                            .article(.class("span12 post"),
+                                .contentBody(section.body)
+                            ) // article.span12 post
+                        ),
+                        .itemList(for: section.items, on: context.site)
+                    ), // wrapper
+                    .footer(
+                        for: context.site
+                    ) // footer
+                ) // body
+            ) // html
+        case "resources":
+            return HTML(
+                .lang(context.site.language),
+                .head(for: section, on: context.site),
+                .body(
+                    .header(for: context, selectedSection: section.id),
+                    .wrapper(
+                        .section(.id("resource_hero"),
+                             .article(
+                                .h2("Resources")
+                            )
+                        ), // games_hero
+                        .section(.class("section_wrapper"),
+                            .article(.class("span12 post"),
+                                .contentBody(section.body)
+                            ) // article.span12 post
+                        ),
+                        .itemList(for: section.items, on: context.site)
+                    ), // wrapper
+                    .footer(
+                        for: context.site
+                    ) // footer
+                ) // body
+            ) // html
+        case "news":
+            return HTML(
+                .lang(context.site.language),
+                .head(for: section, on: context.site),
+                .body(
+                    .header(for: context, selectedSection: section.id),
+                    .wrapper(
+                        .section(.id("news_hero"),
+                             .article(
+                                .h2("News")
+                            )
+                        ), // games_hero
+                        .section(.class("section_wrapper"),
+                            .article(.class("span12 post"),
+                                .contentBody(section.body)
+                            ) // article.span12 post
+                        ),
+                        .itemList(for: section.items, on: context.site)
+                    ), // wrapper
+                    .footer(
+                        for: context.site
+                    ) // footer
+                ) // body
+            ) // html
+        case "contact":
+            return HTML(
+                .lang(context.site.language),
+                .head(for: section, on: context.site),
+                .body(
+                    .header(for: context, selectedSection: section.id),
+                    .wrapper(
+                        .section(.id("contact_hero"),
+                             .article(
+                                .h2("Contact Us")
+                            )
+                        ), // games_hero
+                        .section(.class("section_wrapper"),
+                            .article(.class("span12 post"),
+                                .contentBody(section.body)
+                            ) // article.span12 post
+                        ),
+                        .itemList(for: section.items, on: context.site)
+                    ), // wrapper
+                    .footer(
+                        for: context.site
+                    ) // footer
+                ) // body
+            ) // html
+        default:
+            return HTML(
+                .lang(context.site.language),
+                .head(for: section, on: context.site),
+                .body(
+                    .header(for: context, selectedSection: section.id),
+                    .wrapper(
+                        .section(.class("section_wrapper"),
+                            .article(.class("span12 post"),
+                                .contentBody(section.body)
+                            ) // article.span12 post
+                        ),
+                        .itemList(for: section.items, on: context.site)
+                    ), // wrapper
+                    .footer(
+                        for: context.site
+                    ) // footer
+                ) // body
+            ) // html
+        }
     }
 
     func makeItemHTML(for item: Item<Site>, context: PublishingContext<Site>) throws -> HTML {
@@ -116,7 +226,7 @@ private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
             )
         )
     }
-
+    
     func makePageHTML(for page: Page, context: PublishingContext<Site>) throws -> HTML {
         HTML(
             .lang(context.site.language),
@@ -128,7 +238,7 @@ private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
             ) // body
         ) // html
     }
-
+    
     func makeTagListHTML(for page: TagListPage, context: PublishingContext<Site>) throws -> HTML? {
         HTML(
             .lang(context.site.language),
@@ -213,22 +323,24 @@ private extension Node where Context == HTML.BodyContext { static func wrapper(_
             ) // #fixed_nav
         ) // header
     } // node
-
+    
     static func itemList<T: Website>(for items: [Item<T>], on site: T) -> Node {
         return .section(.class("section_wrapper"),
             .forEach(items) { item in
                 .article(.class("span6 itemList"),
                        .h4(.text(item.title)),
                        .p(.text(item.description)),
+                       .p(.em(.text(DateFormatter.localizedString(from: item.date, dateStyle: .medium, timeStyle: .none)))),
                        .a(.class(""), .href(item.path),
                        .div(
-                            .h5("Read Now"),
+                        .h5("Read Now"),
+                        .p("Categories:"),
                             .tagList(for: item, on: site)
                         ) // div
                     ) // a.itemListLink
                 ) // article.span6
             } // forEach
-        ) // sectino
+        ) // section
     } // node
 
     static func tagList<T: Website>(for item: Item<T>, on site: T) -> Node {
@@ -249,25 +361,39 @@ private extension Node where Context == HTML.BodyContext { static func wrapper(_
     static func footer<T: Website>(for site: T) -> Node {
         return .footer(
             .section(.class("section_wrapper"),
-                .article(.class("span12"),
+                .article(.class("span12 mailing_list_signup"),
+                    .h5("Join Our Mailing List:"),
+                    .a(.class("button"),
+                        .href("http://eepurl.com/gXlnpf"),
+                        .text("Sign up on Mail Chimp")
+                    ) // a
+                ),
+                .article(.class("span12 footer-info"),
                     .p(
-                        .text("&copy; 2020 San Francisco Organized Play")
-                    )
-                ), // article.span12
-                .article(.class("span4"),
+                        .text("&copy; 2021 San Francisco Organized Play")
+                    ),
                     .p(
                         .class("footer-legal"),
                         .text("This promotional notice uses trademarks and/or copyrights owned by Paizo Publishing, LLC, which are under Paizo's community use policy. We are expressly prohibited from charging you to use or access this content. This promotional notice is not published, endorsed, or specifically approved by Paizo Publishing. For more information about Paizo's Community Use Policy, please visit paizo.com/ paizo/ about/ communityuse. For more information about Paizo Publishing and Paizo Products, please visit paizo.com.")
                     ) // p
-                ), // article.span4
-                .article(.class("span8 mailing_list_signup"),
-                    .h5("Join Our Mailing List"),
-                    .a(
-                        .href("http://eepurl.com/gXlnpf"),
-                        .text("Sign up on Mail Chimp")
-                    ) // a
-                ) // article.span4
-            ) // section.section_wrapper
+                ) // article.span12
+            ), // section.section_wrapper
+            .raw("""
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                    <script type="text/javascript">
+                    const toggler = document.querySelector('.menu_toggler');
+                    const menu    = document.querySelector('.menu');
+
+                    /*
+                     * Toggles on and off the 'active' class on the menu
+                     * and the toggler button.
+                     */
+                    toggler.addEventListener('click', () => {
+                      toggler.classList.toggle('active');
+                      menu.classList.toggle('active');
+                    })
+                    </script>
+                """) // raw -- Jam in some libs and simple js
         ) // footer
     } // node
 }
