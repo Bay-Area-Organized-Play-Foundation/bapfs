@@ -5,6 +5,8 @@ description: Our lodge has been running games online for over a year; some lesso
 tags: Player Craft, Community, VTT
 ---
 
+# Ten Habits of Good Online Players
+
 We have been in lockdown for almost 8 months now. Our lodge has been running games online since then, and I thought to share the good etiquette I've come to appreciate.
 
 --

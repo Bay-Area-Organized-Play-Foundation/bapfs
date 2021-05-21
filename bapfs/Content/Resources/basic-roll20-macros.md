@@ -5,7 +5,7 @@ description: Learn how to get thinfgs done quick in roll20.
 author: Doug Hahn
 tags: Roll20, VTT
 ---
-## Basic Roll20 Macros
+# Basic Roll20 Macros
 
 To roll dice, you can use double brackets. For example, `[[1d20]]`.
 

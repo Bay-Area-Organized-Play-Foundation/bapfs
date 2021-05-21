@@ -5,7 +5,7 @@ description: A local GM's PF2 rulings on things ambiguous. With citation, of cou
 tags: Pathfinder 2E, GMing, Table Variation
 ---
 
-## Pirate Rob's  2E Rulings
+# Pirate Rob's  2E Rulings
 
 Yarr. Welcome. All issues addressed below are ones where I believe there’s a legitimate lack of clarity in the rules. They are the rulings I use at my PFS tables. See supporting notes below to read about the issues and potentially come to your own conclusions.
 

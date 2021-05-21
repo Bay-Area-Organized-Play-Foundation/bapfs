@@ -5,7 +5,7 @@ description: General concepts for those learning the basics of VTT's.
 tags: GMing, Tutorial, VTT
 ---
 
-## VTT Considerations
+# VTT Considerations
 
 VTT ≠ Live games. Many of us prefer live games. We are doing this in the interim. This means you may not want to invest a lot of time or money. However, it’s all another tool in your kit to use. 
 

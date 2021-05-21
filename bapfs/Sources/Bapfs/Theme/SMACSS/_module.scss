@@ -212,7 +212,7 @@ article h5 {
 }
 
 article p {
-  font-family:roboto;
+  @extend .sans;
   @include type-setting(body); 
   padding-bottom:.5rem;
 }
@@ -298,11 +298,29 @@ blockquote {
   }
 }
 
-.tag-list a,
+
 p a,
-footer a,
 .section_wrapper ol a,
 .section_wrapper ul a {
+  @include type-setting(body);
+  display:inline-block;
+  color:$blue;
+  text-decoration:none;
+  &:after {
+      display:block;
+      margin-top:.1rem;
+      content: '';
+      border-bottom: solid 1px $blue;
+      transform: scaleX(0);
+      transition: transform 100ms ease-in-out;
+    }
+    &:hover:after {
+      transform: scaleX(1);
+    }
+}
+
+.tag-list a,
+footer a {
   @include type-setting(h6);
   display:inline-block;
   color:$blue;
@@ -493,6 +511,16 @@ footer p {
   text-align:center;
 }
 
+.social-link {
+  display:inline-block;
+  text-align:right;
+  margin-right:1rem;
+}
+
+.social-link.last {
+  margin-right:0rem;
+}
+
 .footer-info p {
   text-align:right;
 }
@@ -504,6 +532,7 @@ footer p {
   float:right;
   line-height:1.2;
   padding-top:1.5rem;
+  text-align:right;
 }
 
 .mailing_list_signup {

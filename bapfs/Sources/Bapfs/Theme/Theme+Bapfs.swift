@@ -48,7 +48,7 @@ private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
                     .itemList(
                         for: context.allItems(
                             sortedBy: \.date,
-                            order: .ascending
+                            order: .descending
                         ),
                         on: context.site
                     ) // itemlist
@@ -66,7 +66,13 @@ private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
         case "games":
             return HTML(
                 .lang(context.site.language),
-                .head(for: section, on: context.site),
+                .head(for: section, on: context.site,
+                      stylesheetPaths:
+                          ["/styles.css",
+                           "https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap",
+                           "https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+                          ]
+                  ),
                 .body(
                     .header(for: context, selectedSection: section.id),
                     .wrapper(
@@ -90,7 +96,13 @@ private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
         case "new_players":
             return HTML(
                 .lang(context.site.language),
-                .head(for: section, on: context.site),
+                .head(for: section, on: context.site,
+                      stylesheetPaths:
+                          ["/styles.css",
+                           "https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap",
+                           "https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+                          ]
+                  ),
                 .body(
                     .header(for: context, selectedSection: section.id),
                     .wrapper(
@@ -114,7 +126,13 @@ private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
         case "resources":
             return HTML(
                 .lang(context.site.language),
-                .head(for: section, on: context.site),
+                .head(for: section, on: context.site,
+                      stylesheetPaths:
+                          ["/styles.css",
+                           "https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap",
+                           "https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+                          ]
+                  ),
                 .body(
                     .header(for: context, selectedSection: section.id),
                     .wrapper(
@@ -138,7 +156,13 @@ private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
         case "news":
             return HTML(
                 .lang(context.site.language),
-                .head(for: section, on: context.site),
+                .head(for: section, on: context.site,
+                      stylesheetPaths:
+                          ["/styles.css",
+                           "https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap",
+                           "https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+                          ]
+                  ),
                 .body(
                     .header(for: context, selectedSection: section.id),
                     .wrapper(
@@ -162,7 +186,13 @@ private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
         case "contact":
             return HTML(
                 .lang(context.site.language),
-                .head(for: section, on: context.site),
+                .head(for: section, on: context.site,
+                      stylesheetPaths:
+                          ["/styles.css",
+                           "https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap",
+                           "https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+                          ]
+                  ),
                 .body(
                     .header(for: context, selectedSection: section.id),
                     .wrapper(
@@ -186,7 +216,12 @@ private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
         default:
             return HTML(
                 .lang(context.site.language),
-                .head(for: section, on: context.site),
+                .head(for: section, on: context.site,
+                      stylesheetPaths:
+                          ["/styles.css",
+                           "https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap",
+                           "https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+                          ]                  ),
                 .body(
                     .header(for: context, selectedSection: section.id),
                     .wrapper(
@@ -362,16 +397,35 @@ private extension Node where Context == HTML.BodyContext { static func wrapper(_
         return .footer(
             .section(.class("section_wrapper"),
                 .article(.class("span12 mailing_list_signup"),
+                     .h5("Join our Communities:"),
+                     .p(.class("social-link"),
+                         .a(
+                            .href("https://discord.gg/Qj753NEXJm"),
+                            .text("Discord")
+                         ) // a
+                     ), // p
+                     .p(.class("social-link"),
+                         .a(
+                            .href("https://join.slack.com/t/pathfindersociety/shared_invite/zt-qkh9iw6e-lW1UCYsbRmMSH5wlI_FwOg"),
+                            .text("Slack")
+                         ) // a
+                     ), // p
+                     .p(.class("social-link last"),
+                         .a(
+                            .href("https://www.facebook.com/groups/OaktownPathfinderSociety"),
+                            .text("Facebook")
+                         ) // a
+                     ) // p
+                ),
+                .article(.class("span12 mailing_list_signup"),
                     .h5("Join Our Mailing List:"),
                     .a(.class("button"),
                         .href("http://eepurl.com/gXlnpf"),
                         .text("Sign up on Mail Chimp")
                     ) // a
                 ),
-                .article(.class("span12 footer-info"),
-                    .p(
-                        .text("&copy; 2021 San Francisco Organized Play")
-                    ),
+                .article(.class("span12 mailing_list_signup"),
+                    .h5("@ 2021 San Francisco Organized Play"),
                     .p(
                         .class("footer-legal"),
                         .text("This promotional notice uses trademarks and/or copyrights owned by Paizo Publishing, LLC, which are under Paizo's community use policy. We are expressly prohibited from charging you to use or access this content. This promotional notice is not published, endorsed, or specifically approved by Paizo Publishing. For more information about Paizo's Community Use Policy, please visit paizo.com/ paizo/ about/ communityuse. For more information about Paizo Publishing and Paizo Products, please visit paizo.com.")

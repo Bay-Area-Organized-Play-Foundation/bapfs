@@ -4,7 +4,7 @@ title: When the Writers are Wrong
 description: What should a GM do when a scenario contains errors? 
 tags: GMing, Table Variation
 ---
-## When the Writers are Wrong
+# When the Writers are Wrong
 
 Organized Play aims to provide a consistent experience, but GMs sometimes find mistakes or errors in a scenario and need to make judgment a call on their own. Here’s how you can a better job resolving errors and grey areas:
 
