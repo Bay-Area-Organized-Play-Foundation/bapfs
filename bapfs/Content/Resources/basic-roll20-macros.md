@@ -25,26 +25,26 @@ Longspear hits AC [[1d20+8]]
 for [[1d8+4]] Piercing damage.
 ```
 
-You can store this in a text document on your computer, and paste it into roll20. You don;t need fancy characer sheets. 
+You can store this in a text document on your computer, and paste it into Roll20. You don't need fancy characer sheets. 
 
 ### Saving Macros
 
-1. In Roll20, click the Macros icon on the top right (the [3 lines](https://share.getcloudapp.com/OAuW5oYN)). 
-2. Click "Add" and a new window will appear. It looks like [this](https://share.getcloudapp.com/mXu1P76k).
-3. Name the macro whatever you want. For example, a Will save macro might be called "Will."
+1. In Roll20, click the `Macros` icon on the top right (the [3 lines](https://share.getcloudapp.com/OAuW5oYN)). 
+2. Click `Add` and a new window will appear. It looks like [this](https://share.getcloudapp.com/mXu1P76k).
+3. Name the macro whatever you want. For example, a Will save macro might be called `Will`.
 4. Type in yur text. [Here is how it might look, using Will save as an example](https://share.getcloudapp.com/5zuA95YL).
-5. Click "Test Macro." You should see the dice oll in the chat window. 
-6. Click "Save Changes."
+5. Click `Test Macro`. You should see the dice oll in the chat window. 
+6. Click `Save Changes`.
 7. Now you will see the [macro in the pane](https://share.getcloudapp.com/Jru1nwOZ) and you can use it any time by clicking the dice icon next to the name.
 
 ### Putting Macros in the Bar
-1. In Roll20, click the Macros icon on the top right (the [3 lines](https://share.getcloudapp.com/OAuW5oYN)). 
-2. Click ["Show macro quick bar?"](https://share.getcloudapp.com/Qwu92QBY); this will activate the quick bar. 
-3. Click the "In Bar" option next to whatever macros you want to see. [Here is how that looks.](https://share.getcloudapp.com/6quQvD11)
-4. You should now see the button on your screen. [A basic set looks like this](https://share.getcloudapp.com/ApuREOBr).
+1. In Roll20, click the `Macros` icon on the top right (the [3 lines](https://share.getcloudapp.com/OAuW5oYN)). 
+2. Click [`Show macro quick bar?`](https://share.getcloudapp.com/Qwu92QBY); this will activate the quick bar. 
+3. Click the `In Bar` option next to [whatever macros you want to see](https://share.getcloudapp.com/6quQvD11).
+4. You should now [see the button on your screen](https://share.getcloudapp.com/ApuREOBr).
 
 ### Rolling Initiative & Adding it to the Tracker 
-You can rolll initiative at the click of a button and get it automatically added to the tracker. While this isn;t needed, it's a big time saver and helpful to the GM. Here is that basic macro:
+You can rolll initiative at the click of a button and get it automatically added to the tracker. While this isn't needed, it's a big time saver and helpful to the GM. Here is that basic macro:
 
 ```
 /roll 1d20 + YOUR_MODIFIER &{tracker:+}

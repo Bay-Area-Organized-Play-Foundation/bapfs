@@ -7,6 +7,6 @@ tags: Volunteers, Leadership
 
 # Dennis Muldoon, New East Bay VC
 
-Alistair is leaving the country and in doing so he leaves behind some exceptionally large shoes to fill. While there have been many wonderful candidates, we are pleased to announce that Dennis Muldoon will be succeeding Alistair as Venture Captain.
+Alistair is leaving the country and in doing so he leaves behind some exceptionally large shoes to fill. While there have been many wonderful candidates, we are pleased to announce that Dennis Muldoon will be succeeding Alistair as Venture-Captain.
 
 Please join us in wishing both Dennis and Alistair all the best in their new roles!

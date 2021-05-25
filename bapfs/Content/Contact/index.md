@@ -24,11 +24,11 @@ description: Contact the Organized Play Foundation volunteers.
 
 ### Venture Captains
 
-- South Bay/ San francisco: John and Wendy-Ann Francis
+- South Bay & San Francisco: John and Wendy-Ann Francis
 - Easy Bay: Dennis Muldoon
 
 ### Venture Lieutenants
-List them here with areas
+List to be posted soon!
 
 ### Venture Agents
-List them here with stores
+List to be posted soon!
