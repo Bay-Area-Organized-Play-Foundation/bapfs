@@ -11,34 +11,34 @@ You only need two things, in this order of importance:
 1. A good attitude
 2. An Organized Play membership ID (you can get one at the [Paizo site](https://paizo.com/organizedplay/myAccount) or your GM can help you get one)
 
-Really… that's all you need. You can walk into a game and play a pregenerated character, or build your own and bring all the nells and whistles! 
+Really… that's all you need. You can walk into a game and play a pregenerated character, or build your own and bring all the bells and whistles! 
 
 ### What are These Games Even?
 
-We play three main games: [Pathfinder Second Edition](https://paizo.com/pathfinder) is the newer one and is a high fantasy setting full of swords and sorcery. [Starfinder](https://paizo.com/starfinder) is the science fantasy and space opera side of things. pathifner First Editino is the game Paizo published for a decade; it still has a vibrant collecive of die-hard players in our area.  We have curated some quick links to learn more:
+We play three main games: [Pathfinder Second Edition](https://paizo.com/pathfinder) is the newer one and is a high fantasy setting full of swords and sorcery. [Starfinder](https://paizo.com/starfinder) is the science fantasy and space opera side of things. Pathfinder First Editino is the game Paizo published for a decade; it still has a vibrant collecive of die-hard players in our area.  We have curated some quick links to learn more:
 
 ##### Pathfinder Second Edition
 
 - Chronicle 0
-- Character Creation
+- [Character Creation](https://www.organizedplayfoundation.org/Lorespire/pfs2guide._.Character-Creation)
 
 ##### Starfinder
 
-- Chronicle 0
-- Character Creation
+- [Chronicle 0](https://www.organizedplayfoundation.org/Lorespire/tiki-download_file.php?fileId=4)
+- [Character Creation](https://www.organizedplayfoundation.org/Lorespire/sfsguide._.Character-Creation)
 
 ##### Pathfiner 1e
 
-- Chronicle 0
+- [Chronicle 0](https://paizo.com/include/WelcomeToPathfinder.zip)
 - Character Creation
 
 ### In-Depth Guides & Reference Points
 
 Every player should eventually read the guide for their system, cover to cover. 
 
-- [Second ed Roleplating Guide](https://organizedplayfoundation.org/Lorespire/Pathfinder-Society-(Second-Edition)-Guide-to-Organized-Play)
+- [Second edition Roleplating Guide](https://organizedplayfoundation.org/Lorespire/Pathfinder-Society-(Second-Edition)-Guide-to-Organized-Play)
 - [Starfinder Guide](https://organizedplayfoundation.org/Lorespire/Starfinder-Society-Guide-to-Organized-Play)
-- [First ed Roleplaying Guide](https://paizo.com/products/btpy84k4/discuss&page=5?Pathfinder-Society-Roleplaying-Guild-Guide)
+- [First edition Roleplaying Guide](https://paizo.com/products/btpy84k4/discuss&page=5?Pathfinder-Society-Roleplaying-Guild-Guide)
 
 ### Community Guidelines
 

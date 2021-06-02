@@ -11,7 +11,7 @@ Yarr. Welcome. All issues addressed below are ones where I believe there’s a l
 
 1. Minions get actions when commanded. Slow/Quickened doesn’t matter. (Uncommanded Independent ACs are effected)
 1. Learning Formulas: Once you have a formula you can copy it into your book with 1 hour of work with no cost/check.
-1.  Magical Shorthand downtime is performed as though you were earning income (default is level -2, must be completed in 8 day chunks etc) replacing the learn a spell mechanic. Meaning you always successfully learn the spell (even on a crit fail) and there’s no half price for crit-succeeding but you still get the improved earn income for critting. After 8 day blocks or the end of available downtime you can choose to stop and cash out / begin a new project etc.
+1. Magical Shorthand downtime is performed as though you were earning income (default is level -2, must be completed in 8 day chunks etc) replacing the learn a spell mechanic. Meaning you always successfully learn the spell (even on a crit fail) and there’s no half price for crit-succeeding but you still get the improved earn income for critting. After 8 day blocks or the end of available downtime you can choose to stop and cash out / begin a new project etc.
 1. For Wands/Scroll Crafting there is a singular formula for each level (scroll 1, scroll 2, scroll 3 etc)
 1. Acid Splash deals splash damage as though it were a splash weapon (On anything except a crit-fail the target and all creatures within 5 feet take the splash damage)
 1. Removing any shield takes 1 action.
