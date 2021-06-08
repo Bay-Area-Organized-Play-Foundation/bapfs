@@ -1,6 +1,6 @@
 ---
 title: Games
-description: An index of all the events we have in the Bay Area. Visit us!  
+description: An index of all the events we have in the Bay Area. Visit us!
 ---
 
 Our community is diverse and welcoming. Hop onto our [Discord group](https://discord.gg/Qj753NEXJm), [Facebook Group](https://www.facebook.com/groups/OaktownPathfinderSociety), [Slack Group](#), or  [mailing list](#) and say hello.
@@ -20,7 +20,7 @@ Many of our lodges run games in the VTT environment. Below is a list of physical
 ##### Brentwood
 - [Tableflip](#)
 
-### San Francisco 
+### San Francisco
 - [Game Post](#)
 - [Gamescape](#)
 - [Laughing Monk](#)
@@ -56,5 +56,3 @@ Many of our lodges run games in the VTT environment. Below is a list of physical
 ##### Santa Clara
 - [Game Kastle](#)
 - [Isle of Gamers](#)
-
-

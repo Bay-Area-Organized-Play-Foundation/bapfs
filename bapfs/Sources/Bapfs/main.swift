@@ -14,9 +14,7 @@ struct Bapfs: Website {
         case contact
     }
 
-    struct ItemMetadata: WebsiteItemMetadata {
-        
-    }
+    struct ItemMetadata: WebsiteItemMetadata {}
 
     // configure the website:
     var url = URL(string: "https://bayareapathfinder.com")!
@@ -31,5 +29,5 @@ try Bapfs().publish(using: [
     .addMarkdownFiles(),
     .copyResources(),
     .generateHTML(withTheme: .Bapfs),
-    .generateSiteMap()
+    .generateSiteMap(),
 ])

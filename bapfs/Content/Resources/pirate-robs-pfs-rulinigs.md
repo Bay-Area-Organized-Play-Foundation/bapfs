@@ -1,7 +1,7 @@
 ---
 date: 2021-03-28 08:35
 title: Pirate Rob's 2E Rulings
-description: A local GM's PF2 rulings on things ambiguous. With citation, of course. 
+description: A local GM's PF2 rulings on things ambiguous. With citation, of course.
 tags: Pathfinder 2E, GMing, Table Variation
 ---
 

@@ -8,17 +8,17 @@ let package = Package(
         .executable(
             name: "Bapfs",
             targets: ["Bapfs"]
-        )
+        ),
     ],
     dependencies: [
-        .package(name: "Publish", url: "https://github.com/johnsundell/publish.git", from: "0.6.0")
+        .package(name: "Publish", url: "https://github.com/johnsundell/publish.git", from: "0.6.0"),
     ],
     targets: [
         .target(
             name: "Bapfs",
             dependencies: [
-                "Publish"
+                "Publish",
             ]
-        )
+        ),
     ]
 )

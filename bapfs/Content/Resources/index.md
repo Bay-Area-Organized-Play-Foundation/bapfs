@@ -5,5 +5,4 @@ tags: Pathfinder 2E
 title: Resources
 ---
 
-### Shared knowledge curated by communiy members. 
-
+### Shared knowledge curated by communiy members.

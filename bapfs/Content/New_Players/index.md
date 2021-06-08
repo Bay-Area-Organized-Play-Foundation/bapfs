@@ -1,6 +1,6 @@
 ---
 title: New Players
-description: Getting started in Organized Play: character creation and more… all you need to get going. 
+description: Getting started in Organized Play: character creation and more… all you need to get going.
 ---
 
 Paizo Organized Play is a roleplaying organization where you can play your character in any game anywhere in the world.  Scenarios and quests are designed to bring players together as they explore, investigate mysteries, and fight the forces of evil in a shared setting that responds to their decisions. It's a great way to make new friends!
@@ -11,7 +11,7 @@ You only need two things, in this order of importance:
 1. A good attitude
 2. An Organized Play membership ID (you can get one at the [Paizo site](https://paizo.com/organizedplay/myAccount) or your GM can help you get one)
 
-Really… that's all you need. You can walk into a game and play a pregenerated character, or build your own and bring all the nells and whistles! 
+Really… that's all you need. You can walk into a game and play a pregenerated character, or build your own and bring all the nells and whistles!
 
 ### What are These Games Even?
 
@@ -34,7 +34,7 @@ We play three main games: [Pathfinder Second Edition](https://paizo.com/pathfind
 
 ### In-Depth Guides & Reference Points
 
-Every player should eventually read the guide for their system, cover to cover. 
+Every player should eventually read the guide for their system, cover to cover.
 
 - [Second ed Roleplating Guide](https://organizedplayfoundation.org/Lorespire/Pathfinder-Society-(Second-Edition)-Guide-to-Organized-Play)
 - [Starfinder Guide](https://organizedplayfoundation.org/Lorespire/Starfinder-Society-Guide-to-Organized-Play)
@@ -55,9 +55,9 @@ The nature of Organized Play means that you may not know everyone at the table, 
 - Only Paizo-made products are allowed for character creation.
 - See the Additional Resources page on the Paizo website for which Paizo products are legal for use for Pathfinder.
 - Organized Play characters cannot be of evil alignment.
-- Organized Play characters cannot intentionally  harm other PCs (e.g. casting area of effect spells that include a teammate) without verbal permission. 
-- While most Paizo-made products are allowed for use in Organized Play, a player must purchase a legal copy (either physical or pdf) of any product aside from the Core Rulebook, the Pathfinder/Starfinder Society Roleplaying Guild Guides, and ‘Character Traits Web Enhancements’ pdf. Referencing the PRD or Hero Lab does not count as having a legal copy of the required material. See the Guide(s) to Organized Play for further details.  
-- Although Organized Play is family-friendly, children under 13 must have supervision at the table. 
+- Organized Play characters cannot intentionally  harm other PCs (e.g. casting area of effect spells that include a teammate) without verbal permission.
+- While most Paizo-made products are allowed for use in Organized Play, a player must purchase a legal copy (either physical or pdf) of any product aside from the Core Rulebook, the Pathfinder/Starfinder Society Roleplaying Guild Guides, and ‘Character Traits Web Enhancements’ pdf. Referencing the PRD or Hero Lab does not count as having a legal copy of the required material. See the Guide(s) to Organized Play for further details.
+- Although Organized Play is family-friendly, children under 13 must have supervision at the table.
 - Some scenarios may contain mature themes; check with the GM if you are unsure of the suitability of a scenario.
 - If something in the scenario makes you uncomfortable, don’t hesitate let the GM know and they will try to tone that part of the scenario down.
 - Player knowledge and character knowledge must be kept separate. If you cannot abide by this, the GM may ask you to leave the table.
@@ -65,7 +65,5 @@ The nature of Organized Play means that you may not know everyone at the table, 
 - If your character has a unique ability, let the GM know beforehand, preferably with enough time for them to read the source material before the game begins.
 - Any player caught intentionally cheating will be given a warning.  Recurrences will result in suspension or permanent ban.
 - All gaming areas are to be cleaned after the game. Please clean up after yourself and respect the venue.
-- If you have to cancel, please withdraw your signup on Warhorn. This helps the event planners, and your fellow players (some of whom may be on a wait list!) If you’re canceling at the last minute, call the store to let them know. 
+- If you have to cancel, please withdraw your signup on Warhorn. This helps the event planners, and your fellow players (some of whom may be on a wait list!) If you’re canceling at the last minute, call the store to let them know.
 - All games must end 15 minutes before closing to allow time for cleanup and paperwork.
-
-
