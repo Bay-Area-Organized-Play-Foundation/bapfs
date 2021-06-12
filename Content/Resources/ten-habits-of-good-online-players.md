@@ -36,7 +36,7 @@ No one wants to listen to you eating or drinking, your barking dog, children cry
 
 It’s also polite to tell a player when you can hear any of these noises from their mic. Don’t be afraid to speak up if you hear something; odds are it’s bothering everyone.
 
-#### Be Presenbt int he Moment 
+#### Be Present in the Moment 
 Browser access and wireless headphones make an ever-present temptation for distraction. Keep multitasking to a minimum — try to think about your next turn if the combat is going long, or take in-game notes. People can tell when you’re not paying attention. It’s not a good look.
 
 #### Respect the Dice
@@ -62,14 +62,14 @@ Speak clearly into your mic, and know your character basics such as DCs and spel
 Players come from a vast array of technology access, financial means, life experiences, and backgrounds. Without social cues like body language and facial expression, many things can get “lost in translation.” Practice the Principle of Charity when others give you feedback, and vice versa.
 
 ### Other Voice/Chat Tips 
-• Use mentions mindfully in places like Discord and Slack. Never mention or tag @everyone; it’s really annoying. Mention the channel instead (i.e. @channel) 
+• Use mentions mindfully in places like Discord and Slack. Never mention or tag @everyone; it’s really annoying. Mention the channel instead (i.e. `@here`) 
 • Don’t be spammy. 
-• You can set a nickname in discord to designate your character, and change your display name in roll20. 
+• You can set a nickname in Discord to designate your character, and change your display name in Roll20. 
 • Acknowledge private messages even if you plan on responding later 
-• Be aware of whose listening — better yet, always assume there is a child who can hear you somewhere and keep it PG. 
+• Be aware of who's listening — better yet, always assume there is a child who can hear you somewhere and keep it PG. 
 • Don’t dominate the conversation; less is more. 
 • Politely Speak up if you’re having a hard time getting a word in. 
 • Don’t argue or criticize in public — if you must, talk to the GM after the game or on break. 
 • Character tokens should generally be round. GMs often use square tokens for enemies. A standard size is a 400x400 px png.
 
-See the original post and discussion over ont he [Paizo Forums](https://paizo.com/threads/rzs4387d?Ten-Habits-of-Good-Online-Players#1).
+See the original post and discussion over on the [Paizo Forums](https://paizo.com/threads/rzs4387d?Ten-Habits-of-Good-Online-Players#1).

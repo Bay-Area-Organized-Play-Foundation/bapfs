@@ -35,7 +35,7 @@ Organized Play aims to provide a consistent experience, but GMs sometimes find m
 
 > A spell or ability, under a certain specific interpretation, trivializes something important to the story. However, there is another valid interpretation where it does not.
 
-**Recommedation:** Consider what is more fun for the group. Respecting the author's intent and the story is important, too. Make sure to communicate that to your table (“This spell might work like that, but the author posted on the forums that they understood the rule in a different way, and I think this interpretation is both cogent andbest for the story.”)
+**Recommedation:** Consider what is more fun for the group. Respecting the author's intent and the story is important, too. Make sure to communicate that to your table (“This spell might work like that, but the author posted on the forums that they understood the rule in a different way, and I think this interpretation is both cogent and best for the story.”)
 
 ### Everything else
 
