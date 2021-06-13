@@ -56,6 +56,7 @@ private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
         switch section.id.rawValue {
         case "games":
             return HTML(
+                .lang(context.site.language),
                 .head(for: section, on: context.site),
                 .body(
                     .header(for: context, selectedSection: section.id),
@@ -118,7 +119,15 @@ private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
                                 .contentBody(section.body)
                             ) // article.span12 post
                         ),
-                        .itemList(for: section.items, on: context.site)
+                        .itemList(
+                            for: Array(
+                                context.allItems(
+                                    sortedBy: \.date,
+                                    order: .descending
+                                ).filter { $0.sectionID.rawValue  == "resources" }
+                            ),
+                            on: context.site
+                        ) // itemlist
                     ), // wrapper
                     .footer(
                         for: context.site
@@ -142,7 +151,15 @@ private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
                                 .contentBody(section.body)
                             ) // article.span12 post
                         ),
-                        .itemList(for: section.items, on: context.site)
+                        .itemList(
+                            for: Array(
+                                context.allItems(
+                                    sortedBy: \.date,
+                                    order: .descending
+                                ).filter { $0.sectionID.rawValue  == "news" }
+                            ),
+                            on: context.site
+                        ) // itemlist
                     ), // wrapper
                     .footer(
                         for: context.site
@@ -345,7 +362,7 @@ private extension Node where Context == HTML.BodyContext { static func wrapper(_
     } // node
 
     static func contactForm<T: Website>(for site: T) -> Node {
-        return .h2("Here's your form")
+        return .h2("Drop form here later")
     } // node
     
     static func footer<T: Website>(for site: T) -> Node {
