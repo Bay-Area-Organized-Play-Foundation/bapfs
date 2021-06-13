@@ -71,7 +71,7 @@ struct Bapfs: Website {
     var name = "Bay Area Organized Play"
     var description = "Bay Area Organized Play"
     var language: Language { .english }
-    var imagePath: Path? { "/images/logo" }
+    var imagePath: Path? { "/images/dragon_og.jpg" }
 }
 
 // Add all markdown, copy compiled css to Output folder, generate webdite.
