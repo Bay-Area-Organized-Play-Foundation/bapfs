@@ -65,7 +65,6 @@ struct Bapfs: Website {
     struct ItemMetadata: WebsiteItemMetadata {
         
     }
-    
     // configure the website:
     var url = URL(string: "https://bayareapathfinder.com")!
     var name = "Bay Area Organized Play"
