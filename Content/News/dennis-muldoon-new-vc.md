@@ -1,6 +1,6 @@
 ---
 title: East Bay's New VC
-date: 2021-05-05 00:00
+date: 2021-05-16 00:00
 description: Congrats to volunteer Dennis Muldoon, who will be overseeing the East Bay as Venture-Captain. 
 tags: Volunteers, Leadership
 ---

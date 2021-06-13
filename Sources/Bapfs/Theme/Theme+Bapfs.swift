@@ -18,13 +18,7 @@ private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
     func makeIndexHTML(for index: Index, context: PublishingContext<Site>) throws -> HTML {
         HTML(
             .lang(context.site.language),
-            .head(for: index, on: context.site,
-                stylesheetPaths:
-                    ["/styles.css",
-                     "https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap",
-                     "https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
-                    ]
-            ),
+            .head(for: index, on: context.site),
             .body(
                 .header(for: context, selectedSection: nil),
                 .wrapper(
@@ -58,21 +52,12 @@ private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
         ) // html
     }
 
-    
     func makeSectionHTML(for section: Section<Site>, context: PublishingContext<Site>) throws -> HTML {
         switch section.id.rawValue {
-        case "home":
-        return HTML(.text("Hello home!"))
         case "games":
             return HTML(
                 .lang(context.site.language),
-                .head(for: section, on: context.site,
-                      stylesheetPaths:
-                          ["/styles.css",
-                           "https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap",
-                           "https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
-                          ]
-                  ),
+                .head(for: section, on: context.site),
                 .body(
                     .header(for: context, selectedSection: section.id),
                     .wrapper(
@@ -96,13 +81,7 @@ private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
         case "new_players":
             return HTML(
                 .lang(context.site.language),
-                .head(for: section, on: context.site,
-                      stylesheetPaths:
-                          ["/styles.css",
-                           "https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap",
-                           "https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
-                          ]
-                  ),
+                .head(for: section, on: context.site),
                 .body(
                     .header(for: context, selectedSection: section.id),
                     .wrapper(
@@ -126,13 +105,7 @@ private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
         case "resources":
             return HTML(
                 .lang(context.site.language),
-                .head(for: section, on: context.site,
-                      stylesheetPaths:
-                          ["/styles.css",
-                           "https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap",
-                           "https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
-                          ]
-                  ),
+                .head(for: section, on: context.site),
                 .body(
                     .header(for: context, selectedSection: section.id),
                     .wrapper(
@@ -146,7 +119,15 @@ private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
                                 .contentBody(section.body)
                             ) // article.span12 post
                         ),
-                        .itemList(for: section.items, on: context.site)
+                        .itemList(
+                            for: Array(
+                                context.allItems(
+                                    sortedBy: \.date,
+                                    order: .descending
+                                ).filter { $0.sectionID.rawValue  == "resources" }
+                            ),
+                            on: context.site
+                        ) // itemlist
                     ), // wrapper
                     .footer(
                         for: context.site
@@ -156,13 +137,7 @@ private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
         case "news":
             return HTML(
                 .lang(context.site.language),
-                .head(for: section, on: context.site,
-                      stylesheetPaths:
-                          ["/styles.css",
-                           "https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap",
-                           "https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
-                          ]
-                  ),
+                .head(for: section, on: context.site),
                 .body(
                     .header(for: context, selectedSection: section.id),
                     .wrapper(
@@ -176,7 +151,15 @@ private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
                                 .contentBody(section.body)
                             ) // article.span12 post
                         ),
-                        .itemList(for: section.items, on: context.site)
+                        .itemList(
+                            for: Array(
+                                context.allItems(
+                                    sortedBy: \.date,
+                                    order: .descending
+                                ).filter { $0.sectionID.rawValue  == "news" }
+                            ),
+                            on: context.site
+                        ) // itemlist
                     ), // wrapper
                     .footer(
                         for: context.site
@@ -186,13 +169,7 @@ private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
         case "contact":
             return HTML(
                 .lang(context.site.language),
-                .head(for: section, on: context.site,
-                      stylesheetPaths:
-                          ["/styles.css",
-                           "https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap",
-                           "https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
-                          ]
-                  ),
+                .head(for: section, on: context.site),
                 .body(
                     .header(for: context, selectedSection: section.id),
                     .wrapper(
@@ -200,9 +177,12 @@ private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
                              .article(
                                 .h2("Contact Us")
                             )
-                        ), // games_hero
+                        ), // contact
                         .section(.class("section_wrapper"),
                             .article(.class("span12 post"),
+                                 .contactForm(
+                                     for: context.site
+                                 ), // contactForm
                                 .contentBody(section.body)
                             ) // article.span12 post
                         ),
@@ -216,12 +196,7 @@ private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
         default:
             return HTML(
                 .lang(context.site.language),
-                .head(for: section, on: context.site,
-                      stylesheetPaths:
-                          ["/styles.css",
-                           "https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap",
-                           "https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
-                          ]                  ),
+                .head(for: section, on: context.site),
                 .body(
                     .header(for: context, selectedSection: section.id),
                     .wrapper(
@@ -390,7 +365,28 @@ private extension Node where Context == HTML.BodyContext { static func wrapper(_
     } // node
 
     static func contactForm<T: Website>(for site: T) -> Node {
-        return .h2("Here's your form")
+        .raw("""
+            <form action="https://formkeep.com/f/ddaf849feb05"
+                accept-charset="UTF-8"
+                enctype="multipart/form-data"
+                method="POST">
+                <div class="form_half">
+                  <label for="name">Your Name*</label>
+                  <input type="text" name="name" placeholder="Name">
+                </div>
+                <div class="form_half">
+                  <label for="email">Your Email*</label>
+                  <input type="email" name="email" placeholder="Email Address">
+                </div>
+                <div class="form_full">
+                  <label for="message">Your Message:</label>
+                  <textarea name="message" rows="6" placeholder="Your message"></textarea>
+                </div>
+                <div class="form_full">
+                    <button type="submit" id="submit" name="submit" value="submit" class="callout-button-no-pad contact-form-button">Send Message</button>
+                </div>
+            </form>
+            """) // raw -- Jam in the html here instead of in the editable content
     } // node
     
     static func footer<T: Website>(for site: T) -> Node {
