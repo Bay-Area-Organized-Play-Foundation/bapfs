@@ -177,9 +177,12 @@ private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
                              .article(
                                 .h2("Contact Us")
                             )
-                        ), // games_hero
+                        ), // contact
                         .section(.class("section_wrapper"),
                             .article(.class("span12 post"),
+                                 .contactForm(
+                                     for: context.site
+                                 ), // contactForm
                                 .contentBody(section.body)
                             ) // article.span12 post
                         ),
@@ -362,7 +365,28 @@ private extension Node where Context == HTML.BodyContext { static func wrapper(_
     } // node
 
     static func contactForm<T: Website>(for site: T) -> Node {
-        return .h2("Drop form here later")
+        .raw("""
+            <form action="https://formkeep.com/f/ddaf849feb05"
+                accept-charset="UTF-8"
+                enctype="multipart/form-data"
+                method="POST">
+                <div class="form_half">
+                  <label for="name">Your Name*</label>
+                  <input type="text" name="name" placeholder="Name">
+                </div>
+                <div class="form_half">
+                  <label for="email">Your Email*</label>
+                  <input type="email" name="email" placeholder="Email Address">
+                </div>
+                <div class="form_full">
+                  <label for="message">Your Message:</label>
+                  <textarea name="message" rows="6" placeholder="Your message"></textarea>
+                </div>
+                <div class="form_full">
+                    <button type="submit" id="submit" name="submit" value="submit" class="callout-button-no-pad contact-form-button">Send Message</button>
+                </div>
+            </form>
+            """) // raw -- Jam in the html here instead of in the editable content
     } // node
     
     static func footer<T: Website>(for site: T) -> Node {
