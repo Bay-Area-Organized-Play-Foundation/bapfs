@@ -18,13 +18,7 @@ private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
     func makeIndexHTML(for index: Index, context: PublishingContext<Site>) throws -> HTML {
         HTML(
             .lang(context.site.language),
-            .head(for: index, on: context.site,
-                stylesheetPaths:
-                    ["/styles.css",
-                     "https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap",
-                     "https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
-                    ]
-            ),
+            .head(for: index, on: context.site),
             .body(
                 .header(for: context, selectedSection: nil),
                 .wrapper(
@@ -58,21 +52,11 @@ private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
         ) // html
     }
 
-    
     func makeSectionHTML(for section: Section<Site>, context: PublishingContext<Site>) throws -> HTML {
         switch section.id.rawValue {
-        case "home":
-        return HTML(.text("Hello home!"))
         case "games":
             return HTML(
-                .lang(context.site.language),
-                .head(for: section, on: context.site,
-                      stylesheetPaths:
-                          ["/styles.css",
-                           "https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap",
-                           "https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
-                          ]
-                  ),
+                .head(for: section, on: context.site),
                 .body(
                     .header(for: context, selectedSection: section.id),
                     .wrapper(
@@ -96,13 +80,7 @@ private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
         case "new_players":
             return HTML(
                 .lang(context.site.language),
-                .head(for: section, on: context.site,
-                      stylesheetPaths:
-                          ["/styles.css",
-                           "https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap",
-                           "https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
-                          ]
-                  ),
+                .head(for: section, on: context.site),
                 .body(
                     .header(for: context, selectedSection: section.id),
                     .wrapper(
@@ -126,13 +104,7 @@ private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
         case "resources":
             return HTML(
                 .lang(context.site.language),
-                .head(for: section, on: context.site,
-                      stylesheetPaths:
-                          ["/styles.css",
-                           "https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap",
-                           "https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
-                          ]
-                  ),
+                .head(for: section, on: context.site),
                 .body(
                     .header(for: context, selectedSection: section.id),
                     .wrapper(
@@ -156,13 +128,7 @@ private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
         case "news":
             return HTML(
                 .lang(context.site.language),
-                .head(for: section, on: context.site,
-                      stylesheetPaths:
-                          ["/styles.css",
-                           "https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap",
-                           "https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
-                          ]
-                  ),
+                .head(for: section, on: context.site),
                 .body(
                     .header(for: context, selectedSection: section.id),
                     .wrapper(
@@ -186,13 +152,7 @@ private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
         case "contact":
             return HTML(
                 .lang(context.site.language),
-                .head(for: section, on: context.site,
-                      stylesheetPaths:
-                          ["/styles.css",
-                           "https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap",
-                           "https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
-                          ]
-                  ),
+                .head(for: section, on: context.site),
                 .body(
                     .header(for: context, selectedSection: section.id),
                     .wrapper(
@@ -216,12 +176,7 @@ private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
         default:
             return HTML(
                 .lang(context.site.language),
-                .head(for: section, on: context.site,
-                      stylesheetPaths:
-                          ["/styles.css",
-                           "https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap",
-                           "https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
-                          ]                  ),
+                .head(for: section, on: context.site),
                 .body(
                     .header(for: context, selectedSection: section.id),
                     .wrapper(
