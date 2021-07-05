@@ -68,7 +68,11 @@ private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
                         ), // games_hero
                         .section(.class("section_wrapper"),
                             .article(.class("span12 post"),
-                                .contentBody(section.body)
+                                .contentBody(section.body),
+                                .img(
+                                    .src("/images/bay-area-map.svg"),
+                                    .alt("A Map Showing the Bay Area Regions")
+                                )
                             ) // article.span12 post
                         ),
                         .itemList(for: section.items, on: context.site)

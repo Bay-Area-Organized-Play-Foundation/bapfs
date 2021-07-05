@@ -1,60 +1,25 @@
 ---
 title: Games
-description: An index of all the events we have in the Bay Area. Visit us!  
+description: An index of all the events we have in the Bay Area. Visit us or meet us online!
 ---
 
-Our community is diverse and welcoming. Hop onto our [Discord group](https://discord.gg/Qj753NEXJm), [Facebook Group](https://www.facebook.com/groups/OaktownPathfinderSociety), [Slack Group](#), or  [mailing list](#) and say hello.
+Our community is diverse and welcoming. Hop onto our [Discord group](https://discord.gg/Qj753NEXJm), [Facebook Group](https://www.facebook.com/groups/OaktownPathfinderSociety), or  [mailing list](#) and say hello.
 
-Many of our lodges run games in the VTT environment. Below is a list of physical locations:
+Stores are reopening, but our lodges also run games in the online environment. Below is a list of events and their Warhorn Pages. 
+
+### Online
+- [East / North Bay Online](https://warhorn.net/events/sf-bay-ne)
+- [San Francisco](https://warhorn.net/events/gamescape-sf-pfs)
+- [Silicon Valley](https://warhorn.net/events/silicon-valley-pfs-sfs-acg) 
+
+
+### San Francisco
+- [Game Post](https://warhorn.net/events/gamescape-sf-pfs)
 
 ### East Bay
 
-##### Antioch
-- [Games of Antioch](#)
-
 ##### Berkeley
-- [Victory Point Cafe](#)
-- [Eudemonia](#)
-- [Games of Berkeley](#)
+- [Victory Point Café](https://warhorn.net/events/sf-bay-ne)
 
-##### Brentwood
-- [Tableflip](#)
-
-### San Francisco 
-- [Game Post](#)
-- [Gamescape](#)
-- [Laughing Monk](#)
-- [Russian Hill Books](#)
-- [Heretic Games](#)
-
-### South Bay
-
-##### Castro Valley
-- [Ronin Games](#)
-
-##### Concord
-- [Black Diamond](#)
-
-##### Fremont
-- [Game Kastle](#)
-
-##### Lake County
-- [Game Hub](#)
-
-##### Mountain View
-- [Game Kastle](#)
-
-##### San Joaquin
-- [Tracy Library](#)
-
-##### San Jose
-- [Legends](#)
-
-##### San Rafael
-- [Gamescape North](#)
-
-##### Santa Clara
-- [Game Kastle](#)
-- [Isle of Gamers](#)
-
-
+##### Oakland
+- [It's Your Move](https://warhorn.net/events/sf-bay-ne)
