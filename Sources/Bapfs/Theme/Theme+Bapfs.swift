@@ -68,7 +68,11 @@ private struct BapfsHTMLFactory<Site: Website>: HTMLFactory {
                         ), // games_hero
                         .section(.class("section_wrapper"),
                             .article(.class("span12 post"),
-                                .contentBody(section.body)
+                                .contentBody(section.body),
+                                .img(
+                                    .src("/images/bay-area-map.svg"),
+                                    .alt("A Map Showing the Bay Area Regions")
+                                )
                             ) // article.span12 post
                         ),
                         .itemList(for: section.items, on: context.site)
@@ -398,12 +402,6 @@ private extension Node where Context == HTML.BodyContext { static func wrapper(_
                          .a(
                             .href("https://discord.gg/Qj753NEXJm"),
                             .text("Discord")
-                         ) // a
-                     ), // p
-                     .p(.class("social-link"),
-                         .a(
-                            .href("https://join.slack.com/t/pathfindersociety/shared_invite/zt-qkh9iw6e-lW1UCYsbRmMSH5wlI_FwOg"),
-                            .text("Slack")
                          ) // a
                      ), // p
                      .p(.class("social-link last"),
