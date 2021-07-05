@@ -5,13 +5,32 @@ description: Contact the Organized Play Foundation volunteers.
 
 ## Our Crew
 
-### Venture Captains
+### Bay Area South & West
 
-- South Bay & San Francisco: John and Wendy-Ann Francis
-- Easy Bay: Dennis Muldoon
+##### Venture-Captains
+- John and Wendy-Ann Francis
 
-### Venture Lieutenants
-List to be posted soon!
+##### Venture-Lieutenants
+- Leslie Bogen 
+- Doug Hahn
+- Eleanor Jenner
+- Joe Smith
 
-### Venture Agents
-List to be posted soon!
+##### Venture Agents
+- Angelo Martinez @ _Game Post_
+- Nick Flitter 
+
+### East & North bay
+
+##### Venture-Captain
+- Dennis Muldoon
+
+##### Venture Lieutenants
+- James Anderson
+
+##### Venture Agents
+- Eric Hansen: _It's Your Move_
+- Isis Woz: _Victory Point Café_
+- Pirate Rob: _Victory Point Café_
+- Kate baker: _Victory Point Café_
+
