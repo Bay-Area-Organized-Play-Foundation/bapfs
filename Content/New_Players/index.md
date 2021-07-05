@@ -19,7 +19,8 @@ We play three main games: [Pathfinder Second Edition](https://paizo.com/pathfind
 
 ##### Pathfinder Second Edition
 
-- Chronicle 0
+- [Chronicle 0](/images/PFS2E_chronicle0.pdf)
+- [Cheat Sheet](/images/cheat-sheet.pdf)
 - [Character Creation](https://www.organizedplayfoundation.org/Lorespire/pfs2guide._.Character-Creation)
 
 ##### Starfinder
@@ -30,7 +31,6 @@ We play three main games: [Pathfinder Second Edition](https://paizo.com/pathfind
 ##### Pathfiner 1e
 
 - [Chronicle 0](https://paizo.com/include/WelcomeToPathfinder.zip)
-- Character Creation
 
 ### In-Depth Guides & Reference Points
 

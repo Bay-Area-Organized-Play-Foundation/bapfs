@@ -404,12 +404,6 @@ private extension Node where Context == HTML.BodyContext { static func wrapper(_
                             .text("Discord")
                          ) // a
                      ), // p
-                     .p(.class("social-link"),
-                         .a(
-                            .href("https://join.slack.com/t/pathfindersociety/shared_invite/zt-qkh9iw6e-lW1UCYsbRmMSH5wlI_FwOg"),
-                            .text("Slack")
-                         ) // a
-                     ), // p
                      .p(.class("social-link last"),
                          .a(
                             .href("https://www.facebook.com/groups/OaktownPathfinderSociety"),
