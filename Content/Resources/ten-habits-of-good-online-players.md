@@ -2,7 +2,7 @@
 date: 2020-11-5 08:35
 title: Ten Habits of Good Online Players
 description: Our lodge has been running games online for over a year; some lessons learned.
-tags: Player Craft, Community, VTT
+tags: 2e, Player Craft, Community, VTT, Guidces
 ---
 
 # Ten Habits of Good Online Players

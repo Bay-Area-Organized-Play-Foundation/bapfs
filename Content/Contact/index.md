@@ -19,6 +19,8 @@ description: Contact the Organized Play Foundation volunteers.
 ##### Venture Agents
 - Angelo Martinez @ _Game Post_
 - Nick Flitter 
+- Cordell Kintner
+- Geoff Nicholls
 
 ### East & North bay
 
@@ -29,8 +31,8 @@ description: Contact the Organized Play Foundation volunteers.
 - James Anderson
 
 ##### Venture Agents
-- Eric Hansen: _It's Your Move_
-- Isis Woz: _Victory Point Café_
-- Pirate Rob: _Victory Point Café_
-- Kate baker: _Victory Point Café_
+- Eric Hansen @ _It's Your Move_
+- Isis Woz @ _Victory Point Café_
+- Pirate Rob @ _Victory Point Café_
+- Kate baker @ _Victory Point Café_
 
