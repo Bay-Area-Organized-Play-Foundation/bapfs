@@ -5,7 +5,7 @@ To compile css, cd into the bapfs directory of this project, and run this comman
 sass --watch Sources/Bapfs/Theme/smacss/styles.scss:Resources/styles.css --style compressed
 ```
 
-To run locally on localhost:8000, cd into /bapfs/bapfs and run:
+To run locally on localhost:8000, cd into /bapfs and run:
 ```
 publish run
 ```
